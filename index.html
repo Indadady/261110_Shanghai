@@ -13,8 +13,12 @@
     <title>드림스타트 상해 3박4일 · 투어메이커 스마트 가이드북</title>
     <meta name="description" content="2026 드림스타트 취약계층 해외연수 · 상해 3박4일 스마트 가이드북 (TM-261117-SHANGHAI)">
     <meta property="og:title" content="드림스타트 상해 가이드북">
-    <meta property="og:description" content="강릉 출발 · 상해 디즈니 · 초등 가족 완화 일정 안내">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1538426452914-9bf4fad4f0c4?w=1200">
+    <meta property="og:description" content="강릉 출발 · IRIC · 디즈니 · 초등 가족 완화 일정 안내">
+    <meta property="og:image" content="https://indadady.github.io/261117_Shanghai/assets/images/og-thumb.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1272">
+    <meta property="og:image:alt" content="상해 푸동 스카이라인">
+    <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{tm:'#004098','tm-dark':'#002d6b'}}}}</script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -25,8 +29,8 @@
         :root { --tm: #004098; --tm-dark: #002d6b; }
         body { font-family: 'Noto Sans KR', sans-serif; background: #f8fafc; color: #1e293b; word-break: keep-all; }
         .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(0, 64, 152, 0.75)),
-                url('https://images.unsplash.com/photo-1538426452914-9bf4fad4f0c4?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(15, 23, 42, 0.38), rgba(0, 64, 152, 0.72)),
+                url('assets/images/hero.jpg');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
         @media(max-width:768px) { .hero-bg { background-attachment: scroll; } }
@@ -158,7 +162,7 @@
                                 <li><span class="tm-highlight">IRIC 지능제조센터</span> 공식방문 (자딩·남샹 · 로봇 체험 · 짧게)</li>
                                 <li>대한민국 임시정부 청사 (짧게)</li>
                                 <li>예원 · 전통거리 산책</li>
-                                <li>외탄 야경 산책 (유람선은 선택)</li>
+                                <li>외탄 · 루자쭈이·동방명주 외관 야경 포토</li>
                             </ul>
                         </td>
                         <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> 호텔</div><div class="tm-meal-simple"><strong>중</strong> 현지</div><div class="tm-meal-simple"><strong>석</strong> 한식</div><div class="tm-meal-simple">상해호텔</div></div></td>
@@ -177,7 +181,7 @@
                         <td class="tm-col-date">4일차<br><span style="font-size:9px;color:#64748b;font-weight:normal">11/20(금)</span><br><br>상해<br>강릉</td>
                         <td class="tm-col-desc">
                             <ul class="tm-desc-list">
-                                <li>루자쭈이 · 동방명주 외관 포토스톱</li>
+                                <li>호텔 조식 · 체크아웃</li>
                                 <li>푸동공항 출국 → 인천 도착 → 강릉 귀환</li>
                             </ul>
                         </td>
@@ -422,10 +426,10 @@
                                 <div class="timeline-dot bg-indigo-500 ring-indigo-100"></div>
                                 <div class="schedule-media">
                                     <div class="schedule-desc">
-                                        <h4 class="font-bold text-lg text-slate-800">외탄 야경</h4>
-                                        <p class="text-sm text-slate-600 mt-2">황푸강 스카이라인을 산책으로 감상합니다. 유람선은 컨디션에 따라 선택합니다.</p>
+                                        <h4 class="font-bold text-lg text-slate-800">외탄 · 루자쭈이·동방명주 야경</h4>
+                                        <p class="text-sm text-slate-600 mt-2">황푸강 양쪽 스카이라인을 산책·기념사진으로 남깁니다. 유람선은 컨디션에 따라 선택합니다.</p>
                                     </div>
-                                    <img src="https://images.unsplash.com/photo-1474181487882-5abf3f47ba0c?auto=format&fit=crop&w=480&q=70" alt="외탄 야경" class="schedule-thumb">
+                                    <img src="assets/images/og-thumb.jpg" alt="상해 야경" class="schedule-thumb">
                                 </div>
                             </div>
                         </div>
@@ -467,7 +471,7 @@
                         <div class="flex items-center gap-4 mb-8 border-b pb-5">
                             <div class="bg-[#8b5cf6] text-white text-xl font-bold w-12 h-12 rounded-2xl flex items-center justify-center shrink-0">4일</div>
                             <div>
-                                <h3 class="font-bold text-xl text-slate-800">포토스톱 · 귀국 · 강릉</h3>
+                                <h3 class="font-bold text-xl text-slate-800">귀국 · 강릉 귀환</h3>
                                 <div class="mt-2 flex flex-wrap gap-2 text-xs font-bold">
                                     <span class="bg-amber-50 text-amber-700 border border-amber-100 px-2 py-1 rounded">조: 호텔</span>
                                     <span class="bg-slate-100 text-slate-500 px-2 py-1 rounded">중: 이동</span>
@@ -477,14 +481,9 @@
                         </div>
                         <div class="relative border-l-2 border-slate-200 ml-4 pl-6 space-y-7">
                             <div class="relative">
-                                <div class="timeline-dot bg-[#8b5cf6] ring-violet-100"></div>
-                                <div class="schedule-media">
-                                    <div class="schedule-desc">
-                                        <h4 class="font-bold text-lg text-slate-800">루자쭈이 · 동방명주 외관</h4>
-                                        <p class="text-sm text-slate-600 mt-2">실내 장시간 관람 없이, 기념 사진만 짧게 남깁니다.</p>
-                                    </div>
-                                    <img src="https://images.unsplash.com/photo-1538426452914-9bf4fad4f0c4?auto=format&fit=crop&w=480&q=70" alt="동방명주" class="schedule-thumb">
-                                </div>
+                                <div class="timeline-dot bg-slate-500 ring-slate-100"></div>
+                                <h4 class="font-bold text-lg text-slate-800">호텔 조식 · 체크아웃</h4>
+                                <p class="text-sm text-slate-500 mt-1">귀국 일정에 맞춰 여유 있게 출발합니다.</p>
                             </div>
                             <div class="relative">
                                 <div class="timeline-dot bg-slate-400 ring-slate-100"></div>
@@ -728,37 +727,39 @@
         };
         const mapHints = {
             all: '✈️ 전체: 인천 ↔ 상해(푸동) · 아시아나 OZ',
-            day1: '📍 1일차: 강릉 → 인천 → 푸동 → 호텔',
-            day2: '📍 2일차: IRIC(남샹) → 임시정부 → 예원 → 외탄',
+            day1: '📍 1일차: 강릉 → 인천 → 푸동 도착 후 시내 확대 → 호텔',
+            day2: '📍 2일차: IRIC(남샹) → 임시정부 → 예원 → 외탄·동방명주',
             day3: '📍 3일차: 호텔 → 디즈니랜드 → 호텔',
-            day4: '📍 4일차: 동방명주 → 푸동 → 인천 → 강릉'
+            day4: '📍 4일차: 호텔 → 푸동 → 인천 → 강릉'
         };
         const routes = {
             all: { p:['icn','pvg'], zoom:['icn','pvg'], maxZoom:5, segs:[
                 {from:'icn', to:'pvg', mode:'flight', c:'#004098', label:'출국'},
                 {from:'pvg', to:'icn', mode:'flight', c:'#64748b', label:'귀국'}
             ]},
-            day1: { p:['gneung','icn','pvg','hotel'], zoom:['gneung','icn','pvg','hotel'], maxZoom:6, segs:[
-                {from:'gneung', to:'icn', mode:'bus', c:'#0ea5e9'},
-                {from:'icn', to:'pvg', mode:'flight', c:'#004098'},
-                {from:'pvg', to:'hotel', mode:'bus', c:'#0ea5e9'}
+            day1: { p:['gneung','icn','pvg','hotel'], zoom:['gneung','icn'], maxZoom:8, segs:[
+                {from:'gneung', to:'icn', mode:'bus', c:'#0ea5e9', fit:['gneung','icn'], maxZoom:9},
+                {from:'icn', to:'pvg', mode:'flight', c:'#004098', fit:['icn','pvg'], maxZoom:5,
+                    afterArrive:{ keys:['pvg','hotel'], maxZoom:12, duration:1.7, hint:'🛬 상해 도착 — 시내로 화면 확대', fromLabel:'상해 도착', toLabel:'시내 확대' }},
+                {from:'pvg', to:'hotel', mode:'bus', c:'#0ea5e9', fit:['pvg','hotel'], maxZoom:12}
             ]},
-            day2: { p:['hotel','iric','provisional','yuyuan','bund'], zoom:['hotel','iric','provisional','yuyuan','bund'], maxZoom:11, segs:[
+            day2: { p:['hotel','iric','provisional','yuyuan','bund','pearl'], zoom:['hotel','iric','provisional','yuyuan','bund','pearl'], maxZoom:11, segs:[
                 {from:'hotel', to:'iric', mode:'bus', c:'#4f46e5'},
                 {from:'iric', to:'provisional', mode:'bus', c:'#10b981'},
                 {from:'provisional', to:'yuyuan', mode:'bus', c:'#10b981'},
                 {from:'yuyuan', to:'bund', mode:'bus', c:'#10b981'},
-                {from:'bund', to:'hotel', mode:'bus', c:'#10b981'}
+                {from:'bund', to:'pearl', mode:'bus', c:'#8b5cf6'},
+                {from:'pearl', to:'hotel', mode:'bus', c:'#10b981'}
             ]},
             day3: { p:['hotel','disney'], zoom:['hotel','disney'], maxZoom:11, segs:[
                 {from:'hotel', to:'disney', mode:'bus', c:'#f59e0b'},
                 {from:'disney', to:'hotel', mode:'bus', c:'#f59e0b'}
             ]},
-            day4: { p:['hotel','pearl','pvg','icn','gneung'], zoom:['hotel','pearl','pvg'], maxZoom:11, segs:[
-                {from:'hotel', to:'pearl', mode:'bus', c:'#8b5cf6'},
-                {from:'pearl', to:'pvg', mode:'bus', c:'#8b5cf6'},
-                {from:'pvg', to:'icn', mode:'flight', c:'#004098'},
-                {from:'icn', to:'gneung', mode:'bus', c:'#8b5cf6'}
+            day4: { p:['hotel','pvg','icn','gneung'], zoom:['hotel','pvg'], maxZoom:11, segs:[
+                {from:'hotel', to:'pvg', mode:'bus', c:'#8b5cf6', fit:['hotel','pvg'], maxZoom:11,
+                    afterArrive:{ keys:['pvg','icn'], maxZoom:5, duration:1.5, hint:'🛫 출국 — 항공 구간으로 화면 확대', fromLabel:'푸동 출발', toLabel:'항공 구간' }},
+                {from:'pvg', to:'icn', mode:'flight', c:'#004098', fit:['pvg','icn'], maxZoom:5},
+                {from:'icn', to:'gneung', mode:'bus', c:'#8b5cf6', fit:['icn','gneung'], maxZoom:9}
             ]}
         };
 
@@ -908,6 +909,28 @@
             });
         }
 
+        function boundsFromKeys(keys){
+            const b = L.latLngBounds();
+            (keys || []).forEach(k => { if(spots[k]) b.extend(spots[k].c); });
+            return b;
+        }
+        function flyBoundsAsync(bounds, opts, seq){
+            return new Promise(resolve => {
+                if(seq !== mapDrawSeq || !bounds.isValid()){ resolve(); return; }
+                let done = false;
+                const finish = () => { if(done) return; done = true; resolve(); };
+                const duration = opts.duration || 1.5;
+                map.once('moveend', finish);
+                map.flyToBounds(bounds, {
+                    padding: [48, 48],
+                    maxZoom: opts.maxZoom || 12,
+                    duration,
+                    easeLinearity: 0.25
+                });
+                setTimeout(finish, duration * 1000 + 500);
+            });
+        }
+
         function initMap() {
             if(map || typeof L === 'undefined') return;
             map = L.map('map', { scrollWheelZoom: false });
@@ -942,9 +965,8 @@
             const route = routes[dayId] || routes.all;
             const hintEl = document.getElementById('map-hint');
             if (hintEl) hintEl.innerText = mapHints[dayId] || mapHints.all;
-            let bounds = L.latLngBounds();
-            (route.zoom || route.p).forEach(key => { if(spots[key]) bounds.extend(spots[key].c); });
-            map.fitBounds(bounds, { padding: [40, 40], maxZoom: route.maxZoom || 12 });
+            const startBounds = boundsFromKeys(route.zoom || route.p);
+            if(startBounds.isValid()) map.fitBounds(startBounds, { padding: [40, 40], maxZoom: route.maxZoom || 12 });
             setTimeout(() => map.invalidateSize(), 300);
             const first = route.p[0];
             if(first) pinSpot(first);
@@ -955,11 +977,20 @@
                 setMapLeg(a.t, b.t);
                 const path = seg.mode === 'flight' ? densifyLine(a.c, b.c, 72) : await roadPath(a.c, b.c);
                 if(seq !== mapDrawSeq) return;
-                path.forEach(pt => bounds.extend(pt));
-                map.fitBounds(bounds, { padding: [40, 40], maxZoom: route.maxZoom || 12 });
+                let segBounds = boundsFromKeys(seg.fit || [seg.from, seg.to]);
+                path.forEach(pt => segBounds.extend(pt));
+                map.fitBounds(segBounds, { padding: [40, 40], maxZoom: seg.maxZoom || route.maxZoom || 12 });
                 await animatePath(path, seg.c, seg.mode==='flight' ? '10,8' : null, seg.mode, segMs(seg.mode, dayId), seq);
                 if(seq !== mapDrawSeq) return;
                 pinSpot(seg.to);
+                if(seg.afterArrive && seg.afterArrive.keys){
+                    if(hintEl && seg.afterArrive.hint) hintEl.innerText = seg.afterArrive.hint;
+                    setMapLeg(seg.afterArrive.fromLabel || '도착', seg.afterArrive.toLabel || '화면 확대');
+                    const zoomBounds = boundsFromKeys(seg.afterArrive.keys);
+                    await flyBoundsAsync(zoomBounds, seg.afterArrive, seq);
+                    if(seq !== mapDrawSeq) return;
+                    if(hintEl) hintEl.innerText = mapHints[dayId] || mapHints.all;
+                }
             }
             const leg = document.getElementById('map-leg');
             if(leg && seq === mapDrawSeq) leg.style.display = 'none';
