@@ -102,6 +102,7 @@
                     <a href="#schedule" class="px-3 py-2 font-bold text-tm rounded-lg">상세일정</a>
                     <a href="#entry" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">입국</a>
                     <a href="#hotel" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">호텔</a>
+                    <a href="#video" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">영상</a>
                     <a href="#check" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">준비물</a>
                     <a href="#smart-info" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">여행비서</a>
                     <a href="#contact" class="px-3 py-2 font-bold text-red-600 rounded-lg">연락망</a>
@@ -127,7 +128,7 @@
                 <div class="print-doc-no">문서번호: TM-261117-SHANGHAI · 초안</div>
             </div>
             <div class="print-title">드림스타트 상해 3박4일 일정표 (초안)</div>
-            <p class="print-subtitle">※ 안내 초안이며 항공·현지 사정에 따라 유연하게 진행됩니다. 가흥·항주 미포함 · 디즈니 1일 · 초등 완화</p>
+            <p class="print-subtitle">※ 안내 초안이며 항공·현지 사정에 따라 유연하게 진행됩니다. IRIC 공식방문 · 가흥·항주 미포함 · 디즈니 1일 · 초등 완화</p>
             <div class="print-overview">
                 <div><span class="label">사업</span> 2026 드림스타트 취약계층 해외연수</div>
                 <div><span class="label">일정</span> 2026.11.17(화) ~ 11.20(금)</div>
@@ -154,9 +155,9 @@
                         <td class="tm-col-date">2일차<br><span style="font-size:9px;color:#64748b;font-weight:normal">11/18(수)</span><br><br>상해</td>
                         <td class="tm-col-desc">
                             <ul class="tm-desc-list">
+                                <li><span class="tm-highlight">IRIC 지능제조센터</span> 공식방문 (자딩·남샹 · 로봇 체험 · 짧게)</li>
                                 <li>대한민국 임시정부 청사 (짧게)</li>
                                 <li>예원 · 전통거리 산책</li>
-                                <li>남경로 짧은 자유시간</li>
                                 <li>외탄 야경 산책 (유람선은 선택)</li>
                             </ul>
                         </td>
@@ -209,6 +210,10 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                        <h4 class="font-bold text-indigo-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-robot"></i> IRIC 지능제조센터</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">상해 자딩·남샹의 스마트제조·로봇 연수 거점. 관계자 설명과 로봇 체험을 초등 눈높이에 맞춰 짧게 진행합니다. (가흥 이동 없음)</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
                         <h4 class="font-bold text-tm mb-3 flex items-center gap-2"><i class="fa-solid fa-landmark"></i> 임시정부 · 예원</h4>
                         <p class="text-slate-600 text-sm leading-relaxed">한국 근대사의 숨결과 상해 전통 정원을 짧게 만나며, 사전교육과 이어지는 문화 학습의 장을 만듭니다.</p>
                     </div>
@@ -219,10 +224,6 @@
                     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
                         <h4 class="font-bold text-emerald-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-bus"></i> 강릉 출발 · 오후 항공</h4>
                         <p class="text-slate-600 text-sm leading-relaxed">강릉에서 모여 인천을 거쳐 오후편으로 출국합니다. 첫날은 시내 관광 없이 호텔에서 쉬며 리듬을 맞춥니다.</p>
-                    </div>
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
-                        <h4 class="font-bold text-amber-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-child-reaching"></i> 초등 맞춤 밀도</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed">산업연수·장거리 시외 이동(가흥·항주)을 제외하고, 이동·관람 호흡을 줄인 완화형 코스입니다.</p>
                     </div>
                 </div>
             </div>
@@ -310,7 +311,7 @@
                 <div class="flex flex-wrap gap-2 justify-center mb-6">
                     <button onclick="changeMapAndTab('all')" class="map-tab-btn active px-5 py-2 rounded-full text-sm font-bold border bg-tm text-white border-tm shadow-sm">전체</button>
                     <button onclick="changeMapAndTab('day1')" class="map-tab-btn px-5 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">1일차 도착 <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#0ea5e9] ml-1"></span></button>
-                    <button onclick="changeMapAndTab('day2')" class="map-tab-btn px-5 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">2일차 문화 <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#10b981] ml-1"></span></button>
+                    <button onclick="changeMapAndTab('day2')" class="map-tab-btn px-5 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">2일차 IRIC·문화 <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#10b981] ml-1"></span></button>
                     <button onclick="changeMapAndTab('day3')" class="map-tab-btn px-5 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">3일차 디즈니 <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#f59e0b] ml-1"></span></button>
                     <button onclick="changeMapAndTab('day4')" class="map-tab-btn px-5 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">4일차 귀국 <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#8b5cf6] ml-1"></span></button>
                 </div>
@@ -374,7 +375,7 @@
                         <div class="flex items-center gap-4 mb-8 border-b pb-5">
                             <div class="bg-[#10b981] text-white text-xl font-bold w-12 h-12 rounded-2xl flex items-center justify-center shrink-0">2일</div>
                             <div>
-                                <h3 class="font-bold text-xl text-slate-800">상해 문화 · 역사 (완화)</h3>
+                                <h3 class="font-bold text-xl text-slate-800">IRIC 공식방문 · 상해 문화</h3>
                                 <div class="mt-2 flex flex-wrap gap-2 text-xs font-bold">
                                     <span class="bg-amber-50 text-amber-700 border border-amber-100 px-2 py-1 rounded">조: 호텔</span>
                                     <span class="bg-blue-50 text-blue-700 border border-blue-100 px-2 py-1 rounded">중: 현지</span>
@@ -383,6 +384,20 @@
                             </div>
                         </div>
                         <div class="relative border-l-2 border-slate-200 ml-4 pl-6 space-y-7">
+                            <div class="relative">
+                                <div class="timeline-dot bg-indigo-600 ring-indigo-100"></div>
+                                <div class="schedule-media">
+                                    <div class="schedule-desc">
+                                        <h4 class="font-bold text-lg text-slate-800">IRIC 지능제조센터 공식방문</h4>
+                                        <ul class="text-sm text-slate-600 mt-2 space-y-1 list-disc pl-4">
+                                            <li>상해 자딩구 남샹 · 스마트제조·로봇 국제연수 거점</li>
+                                            <li>관계자 설명 · 가이드 통역 · <strong>로봇 체험</strong> 위주로 초등 페이스에 맞춰 진행</li>
+                                            <li>가흥으로 이동하지 않고 상해 일정으로만 운영</li>
+                                        </ul>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=480&q=70" alt="로봇·스마트제조" class="schedule-thumb">
+                                </div>
+                            </div>
                             <div class="relative">
                                 <div class="timeline-dot bg-[#10b981] ring-emerald-100"></div>
                                 <div class="schedule-media">
@@ -402,11 +417,6 @@
                                     </div>
                                     <img src="https://images.unsplash.com/photo-1591123720164-7113919fb71a?auto=format&fit=crop&w=480&q=70" alt="예원" class="schedule-thumb">
                                 </div>
-                            </div>
-                            <div class="relative">
-                                <div class="timeline-dot bg-sky-500 ring-sky-100"></div>
-                                <h4 class="font-bold text-lg text-slate-800">남경로 — 짧은 자유시간</h4>
-                                <p class="text-sm text-slate-500 mt-1">부모·아이 페이스에 맞춰 구경합니다.</p>
                             </div>
                             <div class="relative">
                                 <div class="timeline-dot bg-indigo-500 ring-indigo-100"></div>
@@ -499,6 +509,32 @@
                         <li>항주·가흥 숙박 없음 (전 일정 상해 고정)</li>
                         <li>조식 포함 기조 · 디즈니 데이는 이른 출발에 맞춰 안내</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="video" class="py-16 bg-slate-900 border-t border-slate-800">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-10 text-white">
+                    <span class="inline-block bg-white/15 text-white text-xs px-3 py-1 rounded-full font-bold mb-3 border border-white/30">OFFICIAL PREVIEW</span>
+                    <h2 class="text-3xl font-bold">영상으로 미리 만나는 상해</h2>
+                    <p class="text-slate-400 text-sm mt-3">상해 공식·공영 채널의 도시 홍보영상입니다. 출국 전 아이들과 함께 보면 좋아요.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black relative">
+                            <iframe class="w-full h-full absolute top-0 left-0" src="https://www.youtube.com/embed/HJua7ge0AI8" title="[4K] This is Shanghai! — ShanghaiEye" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <p class="text-center text-slate-200 font-bold mt-4">This is Shanghai! (4K)</p>
+                        <p class="text-center text-slate-400 text-xs mt-1">ShanghaiEye · 상해 공식 국제홍보 채널</p>
+                    </div>
+                    <div>
+                        <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black relative">
+                            <iframe class="w-full h-full absolute top-0 left-0" src="https://www.youtube.com/embed/Qqgy63NmgCo" title="Shanghai, Let's Meet! — CGTN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <p class="text-center text-slate-200 font-bold mt-4">Shanghai, Let's Meet!</p>
+                        <p class="text-center text-slate-400 text-xs mt-1">상해 도시 이미지 홍보 · CGTN 게시본</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -683,9 +719,9 @@
             icn: { c:[37.4602, 126.4407], t:'인천공항', col:'#64748b', i:'<i class="fa-solid fa-plane-departure"></i>' },
             pvg: { c:[31.1443, 121.8083], t:'상해 푸동공항', col:'#0ea5e9', i:'<i class="fa-solid fa-plane-arrival"></i>' },
             hotel: { c:[31.2304, 121.4737], t:'상해 호텔', col:'#004098', i:'<i class="fa-solid fa-hotel"></i>' },
+            iric: { c:[31.2975, 121.3150], t:'IRIC 지능제조센터', col:'#4f46e5', i:'<i class="fa-solid fa-robot"></i>' },
             provisional: { c:[31.2208, 121.4755], t:'임시정부 청사', col:'#10b981', i:'<i class="fa-solid fa-landmark"></i>' },
             yuyuan: { c:[31.2272, 121.4920], t:'예원', col:'#10b981', i:'<i class="fa-solid fa-tree"></i>' },
-            nanjing: { c:[31.2345, 121.4748], t:'남경로', col:'#10b981', i:'<i class="fa-solid fa-bag-shopping"></i>' },
             bund: { c:[31.2400, 121.4905], t:'외탄', col:'#10b981', i:'<i class="fa-solid fa-water"></i>' },
             disney: { c:[31.1434, 121.6579], t:'상해 디즈니랜드', col:'#f59e0b', i:'<i class="fa-solid fa-wand-magic-sparkles"></i>' },
             pearl: { c:[31.2397, 121.4998], t:'동방명주', col:'#8b5cf6', i:'<i class="fa-solid fa-building"></i>' }
@@ -693,7 +729,7 @@
         const mapHints = {
             all: '✈️ 전체: 인천 ↔ 상해(푸동) · 아시아나 OZ',
             day1: '📍 1일차: 강릉 → 인천 → 푸동 → 호텔',
-            day2: '📍 2일차: 임시정부 → 예원 → 남경로 → 외탄',
+            day2: '📍 2일차: IRIC(남샹) → 임시정부 → 예원 → 외탄',
             day3: '📍 3일차: 호텔 → 디즈니랜드 → 호텔',
             day4: '📍 4일차: 동방명주 → 푸동 → 인천 → 강릉'
         };
@@ -707,11 +743,11 @@
                 {from:'icn', to:'pvg', mode:'flight', c:'#004098'},
                 {from:'pvg', to:'hotel', mode:'bus', c:'#0ea5e9'}
             ]},
-            day2: { p:['hotel','provisional','yuyuan','nanjing','bund'], zoom:['hotel','provisional','yuyuan','nanjing','bund'], maxZoom:13, segs:[
-                {from:'hotel', to:'provisional', mode:'bus', c:'#10b981'},
+            day2: { p:['hotel','iric','provisional','yuyuan','bund'], zoom:['hotel','iric','provisional','yuyuan','bund'], maxZoom:11, segs:[
+                {from:'hotel', to:'iric', mode:'bus', c:'#4f46e5'},
+                {from:'iric', to:'provisional', mode:'bus', c:'#10b981'},
                 {from:'provisional', to:'yuyuan', mode:'bus', c:'#10b981'},
-                {from:'yuyuan', to:'nanjing', mode:'bus', c:'#10b981'},
-                {from:'nanjing', to:'bund', mode:'bus', c:'#10b981'},
+                {from:'yuyuan', to:'bund', mode:'bus', c:'#10b981'},
                 {from:'bund', to:'hotel', mode:'bus', c:'#10b981'}
             ]},
             day3: { p:['hotel','disney'], zoom:['hotel','disney'], maxZoom:11, segs:[
