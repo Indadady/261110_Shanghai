@@ -61,7 +61,7 @@
             @page { size: A4 portrait; margin: 12mm 15mm; }
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
             html, body { background: #fff !important; color: #000 !important; height: auto !important; overflow: visible !important; font-family: 'Noto Sans KR', sans-serif; }
-            header, footer, section:not(#print-area), .no-print, #toast, #phrase-modal, #event-day-bar { display: none !important; }
+            header, footer, section:not(#print-area), .no-print, #toast, #event-day-bar { display: none !important; }
             main, body { padding: 0 !important; margin: 0 !important; width: 100% !important; background: #fff !important; }
             #print-area { display: block !important; width: 100%; box-sizing: border-box; }
             .print-header-top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--tm); padding-bottom: 6px; margin-bottom: 12px; }
@@ -107,6 +107,7 @@
                     <a href="#entry" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">입국</a>
                     <a href="#hotel" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">호텔</a>
                     <a href="#video" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">영상</a>
+                    <a href="#chinese" class="px-3 py-2 font-bold text-amber-700 hover:text-amber-900 rounded-lg">중국어회화</a>
                     <a href="#check" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">준비물</a>
                     <a href="#smart-info" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">여행비서</a>
                     <a href="#contact" class="px-3 py-2 font-bold text-red-600 rounded-lg">연락망</a>
@@ -577,8 +578,26 @@
                             <span id="krw-output" class="font-black text-lg">0</span><span class="text-slate-400 ml-1">원</span>
                         </div>
                         <div id="price-compare" class="mt-4 bg-white rounded-2xl px-4 text-slate-800"></div>
-                        <button type="button" onclick="openPhraseModal()" class="mt-4 w-full bg-tm text-white font-bold py-3 rounded-xl">중국어 간단 회화</button>
+                        <a href="#chinese" class="mt-4 inline-flex w-full items-center justify-center bg-tm text-white font-bold py-3 rounded-xl">중국어 회화 섹션 보기</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chinese" class="py-16 bg-amber-50 border-t border-amber-100">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-10">
+                    <span class="text-amber-700 font-black tracking-widest text-xs uppercase">CHINESE PHRASES</span>
+                    <h2 class="text-3xl font-bold text-slate-800 mt-2">중국어 간단 회화</h2>
+                    <p class="text-sm text-slate-500 mt-2">첫 해외·초등 가족이 바로 쓸 수 있는 표현입니다. 카드를 누르면 크게 볼 수 있어요.</p>
+                </div>
+                <div id="phrase-sections" class="space-y-8"></div>
+                <div id="phrase-focus" class="hidden mt-8 bg-white border-2 border-tm rounded-3xl p-6 md:p-8 text-center shadow-lg">
+                    <p id="pf-emoji" class="text-4xl mb-2"></p>
+                    <p id="pf-kr" class="text-lg font-bold text-slate-800"></p>
+                    <p id="pf-zh" class="text-3xl md:text-4xl font-black text-tm mt-3 leading-relaxed"></p>
+                    <p id="pf-py" class="text-base text-slate-500 mt-2 font-medium"></p>
+                    <button type="button" onclick="clearPhraseFocus()" class="mt-5 text-sm font-bold text-slate-500 underline">닫기</button>
                 </div>
             </div>
         </section>
@@ -608,32 +627,11 @@
         <div class="bg-slate-900 text-white text-sm font-bold px-5 py-3 rounded-full shadow-xl"><span id="toast-msg"></span></div>
     </div>
 
-    <div id="phrase-modal" class="hidden fixed inset-0 z-[90] bg-black/50 items-center justify-center p-4 no-print" onclick="if(event.target===this)closePhraseModal()">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="font-bold text-lg text-slate-800">중국어 간단 회화</h3>
-                <button onclick="closePhraseModal()" class="text-slate-400"><i class="fa-solid fa-xmark text-xl"></i></button>
-            </div>
-            <div class="grid grid-cols-2 gap-2 mb-4">
-                <button onclick="showPhrase('👋','안녕하세요','你好','니 하오')" class="bg-slate-50 border rounded-xl py-3 text-sm font-bold">인사</button>
-                <button onclick="showPhrase('🙏','감사합니다','谢谢','시에 시에')" class="bg-slate-50 border rounded-xl py-3 text-sm font-bold">감사</button>
-                <button onclick="showPhrase('🚻','화장실 어디예요?','洗手间在哪里？','시서우지엔 짜이 나리')" class="bg-slate-50 border rounded-xl py-3 text-sm font-bold">화장실</button>
-                <button onclick="showPhrase('💰','얼마예요?','多少钱？','둬샤오 치엔')" class="bg-slate-50 border rounded-xl py-3 text-sm font-bold">가격</button>
-            </div>
-            <div id="phrase-display" class="hidden flex-col items-center bg-tm/5 rounded-2xl p-5 text-center">
-                <div id="p-emoji" class="text-3xl mb-2"></div>
-                <p id="p-kr-meaning" class="font-bold text-slate-800"></p>
-                <p id="p-local" class="text-2xl font-black text-tm mt-2"></p>
-                <p id="p-prn" class="text-sm text-slate-500 mt-1"></p>
-            </div>
-        </div>
-    </div>
-
     <div class="md:hidden fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-slate-200 flex justify-around py-2 z-50 text-[10px] text-slate-500 font-medium shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.05)] no-print">
         <a href="#home" class="flex flex-col items-center gap-1 p-2 text-tm"><i class="fa-solid fa-house text-xl mb-0.5"></i>홈</a>
         <a href="#map-section" class="flex flex-col items-center gap-1 p-2"><i class="fa-solid fa-map-location-dot text-xl mb-0.5"></i>동선</a>
         <a href="#schedule" class="flex flex-col items-center gap-1 p-2"><i class="fa-regular fa-calendar-days text-xl mb-0.5"></i>일정표</a>
-        <a href="#smart-info" class="flex flex-col items-center gap-1 p-2"><i class="fa-solid fa-wand-magic-sparkles text-xl mb-0.5"></i>여행비서</a>
+        <a href="#chinese" class="flex flex-col items-center gap-1 p-2"><i class="fa-solid fa-language text-xl mb-0.5"></i>회화</a>
     </div>
 
     <script>
@@ -1059,16 +1057,126 @@
         }
         initLiveWidgets();
 
-        function openPhraseModal() { document.getElementById('phrase-modal').classList.remove('hidden'); document.getElementById('phrase-modal').classList.add('flex'); }
-        function closePhraseModal() { document.getElementById('phrase-modal').classList.add('hidden'); document.getElementById('phrase-modal').classList.remove('flex'); document.getElementById('phrase-display').classList.add('hidden'); }
-        function showPhrase(e, k, l, p) {
-            document.getElementById('p-emoji').innerText = e;
-            document.getElementById('p-kr-meaning').innerText = k;
-            document.getElementById('p-local').innerText = l;
-            document.getElementById('p-prn').innerText = p;
-            const d = document.getElementById('phrase-display');
-            d.classList.remove('hidden'); d.classList.add('flex');
+        function openPhraseModal() { document.getElementById('chinese')?.scrollIntoView({ behavior: 'smooth' }); }
+        function closePhraseModal() {}
+        function showPhrase(e, k, l, p) { focusPhrase(e, k, l, p); }
+        function clearPhraseFocus(){
+            const box = document.getElementById('phrase-focus');
+            if(box) box.classList.add('hidden');
         }
+        function focusPhrase(emoji, kr, zh, py){
+            document.getElementById('pf-emoji').innerText = emoji;
+            document.getElementById('pf-kr').innerText = kr;
+            document.getElementById('pf-zh').innerText = zh;
+            document.getElementById('pf-py').innerText = py;
+            const box = document.getElementById('phrase-focus');
+            box.classList.remove('hidden');
+            box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        const PHRASE_GROUPS = [
+            {
+                title: '인사 · 예절',
+                color: 'border-amber-200 bg-white',
+                items: [
+                    { e:'👋', kr:'안녕하세요', zh:'你好', py:'니 하오' },
+                    { e:'🌅', kr:'좋은 아침이에요', zh:'早上好', py:'짜오상 하오' },
+                    { e:'🙏', kr:'감사합니다', zh:'谢谢', py:'시에 시에' },
+                    { e:'🙇', kr:'죄송합니다', zh:'对不起', py:'뚜이부치' },
+                    { e:'🤝', kr:'만나서 반가워요', zh:'很高兴认识你', py:'헌 가오싱 런스 니' },
+                    { e:'👋', kr:'안녕히 가세요', zh:'再见', py:'짜이찌엔' }
+                ]
+            },
+            {
+                title: '길 묻기 · 도움',
+                color: 'border-sky-200 bg-white',
+                items: [
+                    { e:'🚻', kr:'화장실 어디예요?', zh:'洗手间在哪里？', py:'시서우지엔 짜이 나리' },
+                    { e:'📍', kr:'여기가 어디예요?', zh:'这是哪里？', py:'저스 나리' },
+                    { e:'🚌', kr:'호텔로 가고 싶어요', zh:'我要去酒店', py:'워 야오 취 지우디엔' },
+                    { e:'🙋', kr:'도와주세요', zh:'请帮帮我', py:'칭 방방 워' },
+                    { e:'🧭', kr:'이쪽인가요?', zh:'是这边吗？', py:'스 저비엔 마' },
+                    { e:'🧑‍🏫', kr:'가이드 선생님을 찾아요', zh:'我找导游', py:'워 자오 다오유' }
+                ]
+            },
+            {
+                title: '식사 · 주문',
+                color: 'border-orange-200 bg-white',
+                items: [
+                    { e:'🍽️', kr:'메뉴 주세요', zh:'请给我菜单', py:'칭 게이 워 차이단' },
+                    { e:'🍚', kr:'이걸로 주세요', zh:'就要这个', py:'지우 야오 저거' },
+                    { e:'💧', kr:'물 주세요', zh:'请给我水', py:'칭 게이 워 쉐이' },
+                    { e:'🌶️', kr:'맵지 않게 해 주세요', zh:'请不要太辣', py:'칭 부야오 타이 라' },
+                    { e:'🧒', kr:'아이용으로 주세요', zh:'请给孩子的', py:'칭 게이 하이즈 더' },
+                    { e:'🧾', kr:'계산해 주세요', zh:'买单', py:'마이단' }
+                ]
+            },
+            {
+                title: '쇼핑 · 숫자',
+                color: 'border-emerald-200 bg-white',
+                items: [
+                    { e:'💰', kr:'얼마예요?', zh:'多少钱？', py:'둬샤오 치엔' },
+                    { e:'📉', kr:'좀 깎아 주세요', zh:'便宜一点', py:'피엔이 이디엔' },
+                    { e:'💳', kr:'카드 되나요?', zh:'可以刷卡吗？', py:'커이 슈아카 마' },
+                    { e:'1️⃣', kr:'하나 주세요', zh:'给我一个', py:'게이 워 이거' },
+                    { e:'👀', kr:'구경만 할게요', zh:'我只是看看', py:'워 즈스 칸칸' },
+                    { e:'🛍️', kr:'가방 주세요', zh:'请给我袋子', py:'칭 게이 워 다이즈' }
+                ]
+            },
+            {
+                title: '호텔 · 여행',
+                color: 'border-indigo-200 bg-white',
+                items: [
+                    { e:'🏨', kr:'체크인하러 왔어요', zh:'我来办理入住', py:'워 라이 반리 루덴' },
+                    { e:'🔑', kr:'방 열쇠 주세요', zh:'请给我房卡', py:'칭 게이 워 팡카' },
+                    { e:'📶', kr:'와이파이 비밀번호요', zh:'无线网上网密码', py:'우시엔왕 상왕 미마' },
+                    { e:'🧳', kr:'짐을 맡기고 싶어요', zh:'我想寄存行李', py:'워 샹 지춘 싱리' },
+                    { e:'🚕', kr:'택시 불러 주세요', zh:'请帮我叫出租车', py:'칭 방 워 자오 추주처' },
+                    { e:'⏰', kr:'몇 시예요?', zh:'现在几点？', py:'시엔짜이 지디엔' }
+                ]
+            },
+            {
+                title: '아이 · 응급',
+                color: 'border-rose-200 bg-white',
+                items: [
+                    { e:'🧒', kr:'우리 아이예요', zh:'这是我的孩子', py:'저스 워더 하이즈' },
+                    { e:'🤒', kr:'아이가 아파요', zh:'孩子不舒服', py:'하이즈 부수푸' },
+                    { e:'🏥', kr:'병원이 필요해요', zh:'需要去医院', py:'쉬야오 취 이위엔' },
+                    { e:'💧', kr:'천천히 해 주세요', zh:'请慢一点', py:'칭 만 이디엔' },
+                    { e:'🚫', kr:'괜찮아요 / 됐어요', zh:'不用了', py:'부융러' },
+                    { e:'📣', kr:'한국어 하세요?', zh:'你会说韩语吗？', py:'니 후이슈어 한위 마' }
+                ]
+            }
+        ];
+        function focusPhraseByIndex(gi, ii){
+            const it = PHRASE_GROUPS[gi]?.items[ii];
+            if(!it) return;
+            focusPhrase(it.e, it.kr, it.zh, it.py);
+        }
+        function renderPhraseSections(){
+            const root = document.getElementById('phrase-sections');
+            if(!root) return;
+            root.innerHTML = PHRASE_GROUPS.map((g, gi) => `
+                <div class="rounded-3xl border ${g.color} p-5 md:p-6 shadow-sm">
+                    <h3 class="font-black text-slate-800 text-lg mb-4 flex items-center gap-2"><i class="fa-solid fa-comments text-amber-600"></i>${g.title}</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        ${g.items.map((it, ii) => `
+                            <button type="button" onclick="focusPhraseByIndex(${gi},${ii})"
+                                class="text-left bg-slate-50 hover:bg-amber-50 border border-slate-100 hover:border-amber-200 rounded-2xl p-4 transition shadow-sm active:scale-[0.99]">
+                                <div class="flex items-start gap-3">
+                                    <span class="text-2xl leading-none">${it.e}</span>
+                                    <div class="min-w-0">
+                                        <p class="font-bold text-slate-800 text-sm">${it.kr}</p>
+                                        <p class="text-tm font-black text-lg mt-1 leading-snug">${it.zh}</p>
+                                        <p class="text-xs text-slate-500 mt-1">${it.py}</p>
+                                    </div>
+                                </div>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderPhraseSections();
 
         const C_KEY = 'tm_shanghai261117_chk_v1';
         const C_ITEMS = [
