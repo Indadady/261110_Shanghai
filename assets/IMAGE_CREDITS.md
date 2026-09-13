@@ -12,4 +12,5 @@
 | day2-bund.jpg | [Commons: File:View of Pudong from across the famous Shanghai bund (35634554993).jpg](https://commons.wikimedia.org/wiki/File:View_of_Pudong_from_across_the_famous_Shanghai_bund_(35634554993).jpg) · 황포강 유람선 시점 | CC BY-SA 2.0 |
 | day3-disney.jpg | [Commons: File:Enchanted Storybook Castle of Shanghai Disneyland.jpg](https://commons.wikimedia.org/wiki/File:Enchanted_Storybook_Castle_of_Shanghai_Disneyland.jpg) · Fayhoo | CC BY-SA 4.0 |
 | day4-planning.jpg | [Commons: File:Shanghai Urban Planning Exhibition Center.jpg](https://commons.wikimedia.org/wiki/File:Shanghai_Urban_Planning_Exhibition_Center.jpg) | CC BY-SA 4.0 |
+| guidebook-qr.png | 자체 생성 · https://indadady.github.io/261117_Shanghai/ | — |
 | hotel.jpg | 담당자 제공 전 — 자동 검색하지 않음 | — |

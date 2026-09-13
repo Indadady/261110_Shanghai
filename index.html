@@ -64,6 +64,8 @@
             header, footer, section:not(#print-area), .no-print, #toast, #event-day-bar { display: none !important; }
             main, body { padding: 0 !important; margin: 0 !important; width: 100% !important; background: #fff !important; }
             #print-area { display: block !important; width: 100%; box-sizing: border-box; }
+            .print-page { display: flex; flex-direction: column; width: 100%; min-height: 270mm; box-sizing: border-box; }
+            .print-page-break { page-break-after: always; break-after: page; }
             .print-header-top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--tm); padding-bottom: 6px; margin-bottom: 12px; }
             .print-header-top img { height: 26px; }
             .print-doc-no { font-size: 9px; color: #555; font-weight: bold; }
@@ -87,6 +89,17 @@
             .tm-meal-simple { display: flex; align-items: flex-start; font-size: 9.5px !important; line-height: 1.4; }
             .tm-meal-simple strong { color: var(--tm); margin-right: 4px; width: 14px; flex-shrink: 0; }
             .tm-highlight { font-weight: 700; color: var(--tm); }
+            .print-footer-area { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; font-size: 9.5px; border-top: 1.5px solid #94a3b8; color: #334155; }
+            .print-footer-area .manager { font-weight: bold; border-left: 3px solid var(--tm); padding-left: 8px; white-space: nowrap; }
+            .print-section-title { font-size: 13px; font-weight: 800; color: var(--tm); margin: 0 0 10px; border-left: 4px solid var(--tm); padding-left: 8px; }
+            .print-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; margin: 4px 0 14px; }
+            .print-check-item { display: flex; align-items: center; gap: 10px; font-size: 11.5px; line-height: 1.35; border: 1px solid #94a3b8; border-radius: 6px; padding: 10px 12px; background: #fff !important; word-break: keep-all; }
+            .print-check-box { width: 14px; height: 14px; border: 1.5px solid var(--tm); border-radius: 3px; flex-shrink: 0; }
+            .print-qr-panel { display: flex; gap: 16px; align-items: center; border: 2px solid var(--tm); border-radius: 10px; padding: 14px 16px; background: #f8fafc !important; margin-top: auto; }
+            .print-qr-panel img { width: 120px; height: 120px; flex-shrink: 0; border: 1px solid #e2e8f0; background: #fff; }
+            .print-qr-panel h3 { font-size: 15px; font-weight: bold; color: var(--tm); margin: 0 0 6px; word-break: keep-all; }
+            .print-qr-panel p { font-size: 11.5px; line-height: 1.45; color: #334155; margin: 0 0 5px; word-break: keep-all; }
+            .print-qr-url { font-size: 11px; font-weight: bold; color: #0f172a; word-break: break-all; }
         }
     </style>
 </head>
@@ -129,10 +142,11 @@
 
     <main>
         <div id="print-area">
-            <div class="print-page">
+            <!-- PAGE 1: 일정 -->
+            <div class="print-page print-page-break">
             <div class="print-header-top">
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker">
-                <div class="print-doc-no">문서번호: TM-261117-SHANGHAI · 안내 초안</div>
+                <div class="print-doc-no">TM-261117-SHANGHAI · 1/2 · 안내 초안</div>
             </div>
             <div class="print-title">드림스타트 상해 3박4일 일정표</div>
             <p class="print-subtitle">※ 안내 초안 · 현지 협의 후 가능 일정으로 조정 예정. 심란테크 · IRIC · 임시정부 · 신천지 · 남경로 · 외탄 유람선 · 디즈니 · 도시계획관</p>
@@ -199,6 +213,46 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="print-footer-area">
+                <div>※ 항공·호텔·입장권은 예약 시점에 따라 조정될 수 있습니다.</div>
+                <div class="manager">비상연락: 허나연 010-5066-0433 · 조혁 010-4249-4026</div>
+            </div>
+            </div>
+
+            <!-- PAGE 2: 준비물 + 스마트가이드북 QR -->
+            <div class="print-page">
+                <div class="print-header-top">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker">
+                    <div class="print-doc-no">TM-261117-SHANGHAI · 2/2</div>
+                </div>
+                <div class="print-title">여행 준비물 체크리스트</div>
+                <p class="print-section-title">출국 전 확인</p>
+                <div class="print-check-grid">
+                    <div class="print-check-item"><span class="print-check-box"></span><span>여권 원본 (귀국일 기준 유효기간 6개월 이상)</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>중국 비자 (발급 방식은 별도 안내)</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>여권 사본 2부 (가방·객실 분리 보관)</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>중국형 플러그 / 멀티어댑터</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>어린이 상비약 · 멀미약 · 밴드</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>가디건·바람막이 (11월 상해 일교차)</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>걷기 편한 운동화 (시내 도보·디즈니)</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>위안화 환전 또는 해외결제 카드</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>보조배터리 (사진·지도·연락용)</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>개인 세면도구 (칫솔·치약 등)</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>디즈니 데이용 작은 가방 · 우산</span></div>
+                    <div class="print-check-item"><span class="print-check-box"></span><span>부모 비상연락처 메모</span></div>
+                </div>
+                <div class="print-qr-panel">
+                    <img src="assets/images/guidebook-qr.png" alt="스마트 가이드북 QR코드" width="120" height="120">
+                    <div>
+                        <h3>스마트 가이드북</h3>
+                        <p>QR을 스캔하면 상세 일정·동선 지도·준비물 체크·중국어 회화·메모장을 휴대폰에서 바로 볼 수 있습니다.</p>
+                        <p class="print-qr-url">https://indadady.github.io/261117_Shanghai/</p>
+                    </div>
+                </div>
+                <div class="print-footer-area">
+                    <div>※ 준비물·일정은 현지 협의 후 조정될 수 있습니다.</div>
+                    <div class="manager">비상연락: 허나연 010-5066-0433 · 조혁 010-4249-4026</div>
+                </div>
             </div>
         </div>
 
