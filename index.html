@@ -58,48 +58,52 @@
         .contact-badge { flex-shrink: 0; width: 3rem; text-align: center; font-size: 0.65rem; font-weight: 800; background: rgba(0,64,152,.25); color: #93c5fd; padding: 0.35rem 0.25rem; border-radius: 0.5rem; }
         @media screen { #print-area { display: none !important; } }
         @media print {
-            @page { size: A4 portrait; margin: 12mm 15mm; }
+            @page { size: A4 portrait; margin: 10mm 12mm; }
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
             html, body { background: #fff !important; color: #000 !important; height: auto !important; overflow: visible !important; font-family: 'Noto Sans KR', sans-serif; }
-            header, footer, section:not(#print-area), .no-print, #toast, #event-day-bar { display: none !important; }
+            header, footer, main > *:not(#print-area), .no-print, #toast, #event-day-bar { display: none !important; }
             main, body { padding: 0 !important; margin: 0 !important; width: 100% !important; background: #fff !important; }
             #print-area { display: block !important; width: 100%; box-sizing: border-box; }
-            .print-page { display: flex; flex-direction: column; width: 100%; min-height: 270mm; box-sizing: border-box; }
+            .print-page { display: flex; flex-direction: column; width: 100%; min-height: 277mm; box-sizing: border-box; }
             .print-page-break { page-break-after: always; break-after: page; }
-            .print-header-top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--tm); padding-bottom: 6px; margin-bottom: 12px; }
-            .print-header-top img { height: 26px; }
-            .print-doc-no { font-size: 9px; color: #555; font-weight: bold; }
-            .print-title { text-align: center; font-size: 18px; font-weight: 900; color: var(--tm); margin-bottom: 4px; line-height: 1.4; }
-            .print-subtitle { text-align: center; font-size: 10px; color: #475569; margin: 0 0 10px 0; font-weight: 500; }
-            .print-overview { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; background: #f8fafc !important; border: 1px solid #cbd5e1 !important; border-radius: 4px; padding: 10px 14px; margin-bottom: 12px; font-size: 10.5px; }
+            .print-header-top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.5px solid var(--tm); padding-bottom: 7px; margin-bottom: 10px; }
+            .print-header-top img { height: 28px; }
+            .print-doc-no { font-size: 10.5px; color: #555; font-weight: bold; }
+            .print-title { text-align: center; font-size: 20px; font-weight: 900; color: var(--tm); margin-bottom: 3px; line-height: 1.35; }
+            .print-subtitle { text-align: center; font-size: 11.5px; color: #475569; margin: 0 0 8px 0; font-weight: 600; }
+            .print-overview { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 7px; background: #f8fafc !important; border: 1px solid #cbd5e1 !important; border-radius: 4px; padding: 10px 14px; margin-bottom: 7px; font-size: 12px; }
             .print-overview .label { font-weight: 800; color: var(--tm); margin-right: 4px; }
-            .print-contacts { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-size: 9.5px; margin-bottom: 10px; color: #334155; }
-            .tm-table { width: 100%; border-collapse: collapse; font-size: 10px; table-layout: fixed; border: 1.5px solid #1e293b !important; }
-            .tm-table th { border: 1px solid #1e293b !important; background: #f1f5f9 !important; font-weight: bold; text-align: center; padding: 6px 4px !important; color: var(--tm); }
-            .tm-table td { border: 1px solid #1e293b !important; padding: 8px 10px !important; vertical-align: top; word-break: keep-all; line-height: 1.45; }
-            .tm-table tr { page-break-inside: avoid; break-inside: avoid; }
-            .tm-col-date { width: 11%; text-align: center; font-weight: 700; background: #f8fafc !important; vertical-align: middle; }
+            .print-contacts { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-size: 11px; margin-bottom: 8px; color: #334155; }
+            .tm-table { width: 100%; flex: 1 1 auto; border-collapse: collapse; font-size: 12px; table-layout: fixed; border: 1.5px solid #1e293b !important; }
+            .tm-table th { border: 1px solid #1e293b !important; background: #f1f5f9 !important; font-weight: bold; text-align: center; padding: 7px 4px !important; color: var(--tm); font-size: 12.5px; }
+            .tm-table td { border: 1px solid #1e293b !important; padding: 9px 11px !important; vertical-align: top; word-break: keep-all; line-height: 1.48; }
+            .tm-table tbody tr { page-break-inside: avoid; break-inside: avoid; height: 50mm; }
+            .tm-col-date { width: 11%; text-align: center; font-weight: 800; background: #f8fafc !important; vertical-align: middle; font-size: 13px; }
+            .tm-col-date .tm-date-sub { display: block; font-size: 11px; color: #64748b; font-weight: 600; margin-top: 3px; }
+            .tm-col-date .tm-date-city { display: block; margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--tm); line-height: 1.4; }
             .tm-col-desc { width: 75%; }
             .tm-col-meal { width: 14%; text-align: center; vertical-align: middle; }
             .tm-day-divider td { border-top: 1.5px solid #1e293b !important; }
-            .tm-desc-list { list-style: none; margin: 4px 0 !important; padding-left: 2px; }
-            .tm-desc-list li { position: relative; padding-left: 10px; margin-bottom: 4px !important; }
-            .tm-desc-list li::before { content: '■'; font-size: 7px; position: absolute; left: 0; top: 3.5px; color: var(--tm); }
-            .tm-meal-wrapper { display: flex; flex-direction: column; gap: 5px; text-align: left; padding-left: 2px; }
-            .tm-meal-simple { display: flex; align-items: flex-start; font-size: 9.5px !important; line-height: 1.4; }
-            .tm-meal-simple strong { color: var(--tm); margin-right: 4px; width: 14px; flex-shrink: 0; }
-            .tm-highlight { font-weight: 700; color: var(--tm); }
-            .print-footer-area { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; font-size: 9.5px; border-top: 1.5px solid #94a3b8; color: #334155; }
+            .tm-desc-list { list-style: none; margin: 0 !important; padding-left: 2px; }
+            .tm-desc-list li { position: relative; padding-left: 13px; margin-bottom: 5px !important; }
+            .tm-desc-list li:last-child { margin-bottom: 0 !important; }
+            .tm-desc-list li::before { content: '■'; font-size: 8px; position: absolute; left: 0; top: 5px; color: var(--tm); }
+            .tm-desc-note { display: block; font-size: 10.5px; color: #475569; font-weight: 500; line-height: 1.42; margin-top: 1px; }
+            .tm-meal-wrapper { display: flex; flex-direction: column; gap: 7px; text-align: left; padding-left: 2px; }
+            .tm-meal-simple { display: flex; align-items: flex-start; font-size: 12px !important; line-height: 1.4; }
+            .tm-meal-simple strong { color: var(--tm); margin-right: 4px; width: 16px; flex-shrink: 0; }
+            .tm-highlight { font-weight: 800; color: var(--tm); }
+            .print-footer-area { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; font-size: 11px; border-top: 1.5px solid #94a3b8; color: #334155; }
             .print-footer-area .manager { font-weight: bold; border-left: 3px solid var(--tm); padding-left: 8px; white-space: nowrap; }
-            .print-section-title { font-size: 13px; font-weight: 800; color: var(--tm); margin: 0 0 10px; border-left: 4px solid var(--tm); padding-left: 8px; }
-            .print-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; margin: 4px 0 14px; }
-            .print-check-item { display: flex; align-items: center; gap: 10px; font-size: 11.5px; line-height: 1.35; border: 1px solid #94a3b8; border-radius: 6px; padding: 10px 12px; background: #fff !important; word-break: keep-all; }
-            .print-check-box { width: 14px; height: 14px; border: 1.5px solid var(--tm); border-radius: 3px; flex-shrink: 0; }
-            .print-qr-panel { display: flex; gap: 16px; align-items: center; border: 2px solid var(--tm); border-radius: 10px; padding: 14px 16px; background: #f8fafc !important; margin-top: auto; }
-            .print-qr-panel img { width: 120px; height: 120px; flex-shrink: 0; border: 1px solid #e2e8f0; background: #fff; }
-            .print-qr-panel h3 { font-size: 15px; font-weight: bold; color: var(--tm); margin: 0 0 6px; word-break: keep-all; }
-            .print-qr-panel p { font-size: 11.5px; line-height: 1.45; color: #334155; margin: 0 0 5px; word-break: keep-all; }
-            .print-qr-url { font-size: 11px; font-weight: bold; color: #0f172a; word-break: break-all; }
+            .print-section-title { font-size: 15px; font-weight: 800; color: var(--tm); margin: 0 0 12px; border-left: 4px solid var(--tm); padding-left: 8px; }
+            .print-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 4px 0 16px; flex: 1 1 auto; align-content: stretch; }
+            .print-check-item { display: flex; align-items: center; gap: 10px; font-size: 13px; line-height: 1.4; border: 1px solid #94a3b8; border-radius: 6px; padding: 14px 14px; background: #fff !important; word-break: keep-all; }
+            .print-check-box { width: 16px; height: 16px; border: 1.5px solid var(--tm); border-radius: 3px; flex-shrink: 0; }
+            .print-qr-panel { display: flex; gap: 16px; align-items: center; border: 2px solid var(--tm); border-radius: 10px; padding: 16px 18px; background: #f8fafc !important; margin-top: auto; }
+            .print-qr-panel img { width: 128px; height: 128px; flex-shrink: 0; border: 1px solid #e2e8f0; background: #fff; }
+            .print-qr-panel h3 { font-size: 16px; font-weight: bold; color: var(--tm); margin: 0 0 6px; word-break: keep-all; }
+            .print-qr-panel p { font-size: 12.5px; line-height: 1.5; color: #334155; margin: 0 0 5px; word-break: keep-all; }
+            .print-qr-url { font-size: 12px; font-weight: bold; color: #0f172a; word-break: break-all; }
         }
     </style>
 </head>
@@ -168,47 +172,77 @@
                 <thead><tr><th class="tm-col-date">일자/지역</th><th class="tm-col-desc">상세 일정</th><th class="tm-col-meal">식사/숙박</th></tr></thead>
                 <tbody>
                     <tr class="tm-day-divider">
-                        <td class="tm-col-date">1일차<br><span style="font-size:9px;color:#64748b;font-weight:normal">11/10(화)</span><br><br>강릉<br>상해</td>
+                        <td class="tm-col-date">1일차<span class="tm-date-sub">11/10(화)</span><span class="tm-date-city">강릉<br>상해</span></td>
                         <td class="tm-col-desc">
                             <ul class="tm-desc-list">
-                                <li>강릉 집결 → 인천공항 이동</li>
-                                <li><span class="tm-highlight">OZ365</span> 인천 14:10 → 푸동 15:10 · 가이드 미팅</li>
-                                <li><span class="tm-highlight">심란테크놀로지 그룹</span> 공식방문 (장장 · AI·진로 체험)</li>
-                                <li><span class="tm-highlight">상해과학기술관</span> 관람</li>
-                                <li>와심 호텔 체크인 · 석식</li>
+                                <li>강릉 집결 → 인천공항(T1) 이동 · 출국 수속</li>
+                                <li><span class="tm-highlight">OZ365</span> 인천 14:10 → 푸동 15:10 · 입국 심사 후 가이드 미팅</li>
+                                <li><span class="tm-highlight">심란테크놀로지 그룹</span> 공식방문
+                                    <span class="tm-desc-note">푸동 장장 과학성. AI·로봇 전시장을 가이드 통역과 함께 관람하는 진로 체험입니다.</span>
+                                </li>
+                                <li><span class="tm-highlight">상해과학기술관</span> 관람
+                                    <span class="tm-desc-note">세기대로 대형 과학관. 우주·로봇·자연 체험 전시로, 같은 푸동 축에서 이어집니다.</span>
+                                </li>
+                                <li>와심 호텔 체크인 · 석식
+                                    <span class="tm-desc-note">푸동 테마파크점(川周公路7099호). 디즈니랜드와 가까운 숙소입니다.</span>
+                                </li>
                             </ul>
                         </td>
                         <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> ×</div><div class="tm-meal-simple"><strong>중</strong> 간식</div><div class="tm-meal-simple"><strong>석</strong> 한식</div><div class="tm-meal-simple">와심 호텔</div></div></td>
                     </tr>
                     <tr>
-                        <td class="tm-col-date">2일차<br><span style="font-size:9px;color:#64748b;font-weight:normal">11/11(수)</span><br><br>상해</td>
+                        <td class="tm-col-date">2일차<span class="tm-date-sub">11/11(수)</span><span class="tm-date-city">상해</span></td>
                         <td class="tm-col-desc">
                             <ul class="tm-desc-list">
-                                <li><span class="tm-highlight">IRIC 지능제조센터</span> 공식방문 (자딩·남샹 · 로봇 체험 · 진로)</li>
-                                <li>대한민국 임시정부 청사 · 신천지 카페거리</li>
-                                <li>상해의 타임스퀘어 <span class="tm-highlight">남경로</span> 자유시간 (버블티)</li>
-                                <li>외탄 야경 · <span class="tm-highlight">황포강 유람선</span></li>
+                                <li><span class="tm-highlight">IRIC 지능제조센터</span> 공식방문
+                                    <span class="tm-desc-note">자딩구 남샹. 스마트제조·로봇 연수 거점. 관계자 설명과 로봇 체험을 초등 페이스로 진행합니다.</span>
+                                </li>
+                                <li><span class="tm-highlight">대한민국 임시정부 청사</span>
+                                    <span class="tm-desc-note">황푸구 마당로. 1926년부터 한국 근대사의 중심이었던 현장. 초등 눈높이로 짧게 관람합니다.</span>
+                                </li>
+                                <li><span class="tm-highlight">신천지</span> 카페거리
+                                    <span class="tm-desc-note">임시정부 옆 석고문 골목. 서양식 카페거리를 걸어 어제와 오늘의 상해를 비교합니다.</span>
+                                </li>
+                                <li>상해의 타임스퀘어 <span class="tm-highlight">남경로</span> 자유시간 (버블티)
+                                    <span class="tm-desc-note">인민광장에서 외탄까지 이어지는 보행자 거리. 가족 단위로 여유를 가집니다.</span>
+                                </li>
+                                <li>외탄 야경 · <span class="tm-highlight">황포강 유람선</span>
+                                    <span class="tm-desc-note">루자쭈이·동방명주 스카이라인을 남기고, 유람선에서 양쪽 불빛을 강 위에서 둘러봅니다.</span>
+                                </li>
                             </ul>
                         </td>
                         <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> 호텔</div><div class="tm-meal-simple"><strong>중</strong> 현지</div><div class="tm-meal-simple"><strong>석</strong> 삼겹살</div><div class="tm-meal-simple">와심 호텔</div></div></td>
                     </tr>
                     <tr>
-                        <td class="tm-col-date">3일차<br><span style="font-size:9px;color:#64748b;font-weight:normal">11/12(목)</span><br><br>디즈니</td>
+                        <td class="tm-col-date">3일차<span class="tm-date-sub">11/12(목)</span><span class="tm-date-city">디즈니</span></td>
                         <td class="tm-col-desc">
                             <ul class="tm-desc-list">
-                                <li><span class="tm-highlight">상해 디즈니랜드 종일</span> (주토피아 · 가이드 미동행)</li>
-                                <li>공원 안 중식은 자유식 · 저녁 호텔 귀환</li>
+                                <li><span class="tm-highlight">상해 디즈니랜드 종일</span>
+                                    <span class="tm-desc-note">대륙 유일 주토피아 테마랜드. 호텔에서 가까워 이동이 짧고, 공원 안은 가이드가 동행하지 않습니다. 성 앞이 집합 장소입니다.</span>
+                                </li>
+                                <li>초등 페이스 · 우선 3곳
+                                    <span class="tm-desc-note">아이가 고른 어트랙션·퍼레이드·성 사진 중 셋을 목표로 하고, 나머지는 그늘·간식·여유로 둡니다.</span>
+                                </li>
+                                <li>공원 안 중식은 자유식 · 저녁 호텔 귀환 · 샤브샤브
+                                    <span class="tm-desc-note">식당 대기가 길 수 있어 간식·물을 보조로 챙깁니다. 키 제한·쇼는 당일 공원 운영에 따릅니다.</span>
+                                </li>
                             </ul>
                         </td>
                         <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> 호텔</div><div class="tm-meal-simple"><strong>중</strong> 자유식</div><div class="tm-meal-simple"><strong>석</strong> 샤브샤브</div><div class="tm-meal-simple">와심 호텔</div></div></td>
                     </tr>
                     <tr>
-                        <td class="tm-col-date">4일차<br><span style="font-size:9px;color:#64748b;font-weight:normal">11/13(금)</span><br><br>상해<br>강릉</td>
+                        <td class="tm-col-date">4일차<span class="tm-date-sub">11/13(금)</span><span class="tm-date-city">상해<br>강릉</span></td>
                         <td class="tm-col-desc">
                             <ul class="tm-desc-list">
-                                <li>호텔 조식 · 체크아웃</li>
-                                <li><span class="tm-highlight">홍구공원</span> (윤봉길 의사 의거 현장 · 기념당)</li>
-                                <li><span class="tm-highlight">OZ364</span> 푸동 13:10 → 인천 16:00 → 강릉 귀환</li>
+                                <li>호텔 조식 · 체크아웃
+                                    <span class="tm-desc-note">귀국편에 맞춰 오전에 짐을 정리하고, 홍구공원을 본 뒤 푸동공항으로 향합니다.</span>
+                                </li>
+                                <li><span class="tm-highlight">홍구공원</span> · 윤봉길 기념당
+                                    <span class="tm-desc-note">1932년 윤봉길 의사 의거 현장(현 루쉰공원). 매헌 기념당에서 임시정부와 이어지는 근대사를 짧게 돌아봅니다.</span>
+                                </li>
+                                <li><span class="tm-highlight">OZ364</span> 푸동 13:10 → 인천 16:00 → 강릉 귀환
+                                    <span class="tm-desc-note">인천 도착 후 강릉으로 이동합니다. 여권·입국신고서는 출국 심사까지 손에 둡니다.</span>
+                                </li>
                             </ul>
                         </td>
                         <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> 호텔</div><div class="tm-meal-simple"><strong>중</strong> 현지</div><div class="tm-meal-simple"><strong>석</strong> 개별</div></div></td>
