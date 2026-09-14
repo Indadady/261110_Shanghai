@@ -16,3 +16,4 @@
 | day3-disney.jpg | [Commons: File:Enchanted Storybook Castle of Shanghai Disneyland.jpg](https://commons.wikimedia.org/wiki/File:Enchanted_Storybook_Castle_of_Shanghai_Disneyland.jpg) · Fayhoo | CC BY-SA 4.0 |
 | day4-hongkou.jpg | [Commons: File:Yoon Bong-Gil in Lu Xun Park 02.JPG](https://commons.wikimedia.org/wiki/File:Yoon_Bong-Gil_in_Lu_Xun_Park_02.JPG) · 매정(梅亭) | 저작자 표기 |
 | guidebook-qr.png | 자체 생성 · https://indadady.github.io/261110_Shanghai/ | — |
+| bombom-logo.png | 담당자 제공 봄봄콘텐츠 로고 | 담당자 제공 |

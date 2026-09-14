@@ -58,50 +58,57 @@
         .contact-badge { flex-shrink: 0; width: 3rem; text-align: center; font-size: 0.65rem; font-weight: 800; background: rgba(0,64,152,.25); color: #93c5fd; padding: 0.35rem 0.25rem; border-radius: 0.5rem; }
         @media screen { #print-area { display: none !important; } }
         @media print {
-            @page { size: A4 portrait; margin: 10mm 12mm; }
+            @page { size: A4 portrait; margin: 10mm 10mm; }
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-            html, body { background: #fff !important; color: #000 !important; height: auto !important; overflow: visible !important; font-family: 'Noto Sans KR', sans-serif; }
+            html, body { background: #fff !important; color: #1e293b !important; height: auto !important; overflow: visible !important; font-family: 'Noto Sans KR', sans-serif; line-height: 1.5; }
             header, footer, main > *:not(#print-area), .no-print, #toast, #event-day-bar { display: none !important; }
             main, body { padding: 0 !important; margin: 0 !important; width: 100% !important; background: #fff !important; }
             #print-area { display: block !important; width: 100%; box-sizing: border-box; }
             .print-page { display: flex; flex-direction: column; width: 100%; min-height: 277mm; box-sizing: border-box; }
             .print-page-break { page-break-after: always; break-after: page; }
-            .print-header-top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.5px solid var(--tm); padding-bottom: 7px; margin-bottom: 10px; }
-            .print-header-top img { height: 28px; }
-            .print-doc-no { font-size: 10.5px; color: #555; font-weight: bold; }
-            .print-title { text-align: center; font-size: 20px; font-weight: 900; color: var(--tm); margin-bottom: 3px; line-height: 1.35; }
-            .print-subtitle { text-align: center; font-size: 11.5px; color: #475569; margin: 0 0 8px 0; font-weight: 600; }
-            .print-overview { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 7px; background: #f8fafc !important; border: 1px solid #cbd5e1 !important; border-radius: 4px; padding: 10px 14px; margin-bottom: 7px; font-size: 12px; }
-            .print-overview .label { font-weight: 800; color: var(--tm); margin-right: 4px; }
-            .print-contacts { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-size: 11px; margin-bottom: 8px; color: #334155; }
-            .tm-table { width: 100%; flex: 1 1 auto; border-collapse: collapse; font-size: 12px; table-layout: fixed; border: 1.5px solid #1e293b !important; }
-            .tm-table th { border: 1px solid #1e293b !important; background: #f1f5f9 !important; font-weight: bold; text-align: center; padding: 7px 4px !important; color: var(--tm); font-size: 12.5px; }
-            .tm-table td { border: 1px solid #1e293b !important; padding: 9px 11px !important; vertical-align: top; word-break: keep-all; line-height: 1.48; }
-            .tm-table tbody tr { page-break-inside: avoid; break-inside: avoid; height: 50mm; }
-            .tm-col-date { width: 11%; text-align: center; font-weight: 800; background: #f8fafc !important; vertical-align: middle; font-size: 13px; }
-            .tm-col-date .tm-date-sub { display: block; font-size: 11px; color: #64748b; font-weight: 600; margin-top: 3px; }
-            .tm-col-date .tm-date-city { display: block; margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--tm); line-height: 1.4; }
-            .tm-col-desc { width: 75%; }
-            .tm-col-meal { width: 14%; text-align: center; vertical-align: middle; }
-            .tm-day-divider td { border-top: 1.5px solid #1e293b !important; }
-            .tm-desc-list { list-style: none; margin: 0 !important; padding-left: 2px; }
-            .tm-desc-list li { position: relative; padding-left: 13px; margin-bottom: 5px !important; }
-            .tm-desc-list li:last-child { margin-bottom: 0 !important; }
-            .tm-desc-list li::before { content: '■'; font-size: 8px; position: absolute; left: 0; top: 5px; color: var(--tm); }
-            .tm-desc-note { display: block; font-size: 10.5px; color: #475569; font-weight: 500; line-height: 1.42; margin-top: 1px; }
-            .tm-meal-wrapper { display: flex; flex-direction: column; gap: 7px; text-align: left; padding-left: 2px; }
-            .tm-meal-simple { display: flex; align-items: flex-start; font-size: 12px !important; line-height: 1.4; }
-            .tm-meal-simple strong { color: var(--tm); margin-right: 4px; width: 16px; flex-shrink: 0; }
-            .tm-highlight { font-weight: 800; color: var(--tm); }
-            .print-footer-area { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; font-size: 11px; border-top: 1.5px solid #94a3b8; color: #334155; }
-            .print-footer-area .manager { font-weight: bold; border-left: 3px solid var(--tm); padding-left: 8px; white-space: nowrap; }
-            .print-section-title { font-size: 15px; font-weight: 800; color: var(--tm); margin: 0 0 12px; border-left: 4px solid var(--tm); padding-left: 8px; }
+            .std-header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #004098; padding-bottom: 8px; margin-bottom: 10px; }
+            .std-header img { height: 36px; object-fit: contain; }
+            .std-doc-info { text-align: right; font-size: 11.5px; color: #475569; font-weight: 600; }
+            .std-title { text-align: center; margin-bottom: 8px; }
+            .std-title h1 { font-size: 20px; font-weight: 700; color: #0f172a; margin: 0; letter-spacing: -0.4px; line-height: 1.35; }
+            .std-overview { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; background: #f8fafc !important; border: 1px solid #94a3b8 !important; border-radius: 6px; padding: 8px 14px; margin-bottom: 8px; font-size: 12.5px; }
+            .std-overview div { display: flex; gap: 8px; }
+            .std-overview .label { font-weight: 700; color: #004098; }
+            .std-table { width: 100%; flex: 1 1 auto; border-collapse: collapse; font-size: 12px; table-layout: fixed; border: 2px solid #1e293b !important; margin-bottom: 8px; }
+            .std-table th { border: 1px solid #1e293b !important; background: #f8fafc !important; font-weight: 700; text-align: center; padding: 7px 6px !important; color: #1e293b; font-size: 13px; }
+            .std-table td { border: 1px solid #1e293b !important; padding: 8px 10px !important; vertical-align: top; word-break: keep-all; line-height: 1.48; }
+            .std-table tbody tr { page-break-inside: avoid; break-inside: avoid; }
+            .col-date { width: 14%; text-align: center; font-weight: 700; background: #f8fafc !important; vertical-align: middle; }
+            .col-date .date-sub { display: block; font-size: 11.5px; color: #475569; font-weight: 600; margin-top: 3px; }
+            .col-date .date-city { display: block; margin-top: 6px; font-size: 12px; font-weight: 700; color: #004098; line-height: 1.4; }
+            .col-desc { width: 70%; }
+            .col-meal { width: 16%; text-align: center; vertical-align: middle; }
+            .day-divider td { border-top: 2px solid #1e293b !important; }
+            .time-flow { margin-bottom: 4px; font-weight: 500; }
+            .time-tag { display: inline-block; color: #004098; font-weight: 700; margin-right: 5px; }
+            .highlight { font-weight: 700; color: #0f172a; }
+            .desc-list { list-style: none; margin: 4px 0 0 !important; padding-left: 5px; }
+            .desc-list li { position: relative; padding-left: 14px; margin-bottom: 4px !important; line-height: 1.45; }
+            .desc-list li:last-child { margin-bottom: 0 !important; }
+            .desc-list li::before { content: '■'; font-size: 8px; position: absolute; left: 0; top: 4px; color: #004098; }
+            .desc-note { display: block; font-size: 11px; color: #475569; font-weight: 500; line-height: 1.4; margin-top: 1px; }
+            .hotel-divider { border: 0; border-top: 1px dashed #94a3b8; margin: 7px 0 6px 0; }
+            .hotel-info { font-size: 12.5px; color: #0f172a; }
+            .meal-wrapper { display: flex; flex-direction: column; gap: 8px; justify-content: center; height: 100%; text-align: left; padding-left: 4px; }
+            .meal-simple { display: flex; align-items: flex-start; font-size: 12.5px; color: #1e293b; line-height: 1.4; }
+            .meal-simple strong { color: #004098; margin-right: 4px; width: 22px; flex-shrink: 0; }
+            .remarks { font-size: 11.5px; color: #64748b; text-align: right; font-weight: 500; margin: 0 0 6px; }
+            .footer-box { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; border-top: 1px solid #e2e8f0; }
+            .brand-link { font-size: 11.5px; color: #6c757d; text-decoration: none; }
+            .manager-info { text-align: right; border-left: 3px solid #004098; padding-left: 12px; }
+            .manager-info .names { color: #0f172a; font-weight: 700; font-size: 13.5px; }
+            .print-section-title { font-size: 15px; font-weight: 800; color: #004098; margin: 0 0 12px; border-left: 4px solid #004098; padding-left: 8px; }
             .print-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 4px 0 16px; flex: 1 1 auto; align-content: stretch; }
             .print-check-item { display: flex; align-items: center; gap: 10px; font-size: 13px; line-height: 1.4; border: 1px solid #94a3b8; border-radius: 6px; padding: 14px 14px; background: #fff !important; word-break: keep-all; }
-            .print-check-box { width: 16px; height: 16px; border: 1.5px solid var(--tm); border-radius: 3px; flex-shrink: 0; }
-            .print-qr-panel { display: flex; gap: 16px; align-items: center; border: 2px solid var(--tm); border-radius: 10px; padding: 16px 18px; background: #f8fafc !important; margin-top: auto; }
+            .print-check-box { width: 16px; height: 16px; border: 1.5px solid #004098; border-radius: 3px; flex-shrink: 0; }
+            .print-qr-panel { display: flex; gap: 16px; align-items: center; border: 2px solid #004098; border-radius: 10px; padding: 16px 18px; background: #f8fafc !important; margin-top: auto; }
             .print-qr-panel img { width: 128px; height: 128px; flex-shrink: 0; border: 1px solid #e2e8f0; background: #fff; }
-            .print-qr-panel h3 { font-size: 16px; font-weight: bold; color: var(--tm); margin: 0 0 6px; word-break: keep-all; }
+            .print-qr-panel h3 { font-size: 16px; font-weight: bold; color: #004098; margin: 0 0 6px; word-break: keep-all; }
             .print-qr-panel p { font-size: 12.5px; line-height: 1.5; color: #334155; margin: 0 0 5px; word-break: keep-all; }
             .print-qr-url { font-size: 12px; font-weight: bold; color: #0f172a; word-break: break-all; }
         }
@@ -112,7 +119,7 @@
     <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 no-print">
         <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3 shrink-0">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker" class="h-6 md:h-8 w-auto">
+                <img src="assets/images/bombom-logo.png" alt="봄봄콘텐츠" class="h-8 md:h-10 w-auto">
                 <span id="d-day-badge" class="bg-tm text-white text-[10px] px-2.5 py-1 rounded-full font-bold shadow-sm animate-pulse">상태 계산중</span>
             </div>
             <div class="flex-1 overflow-x-auto no-scrollbar ml-4 md:ml-8">
@@ -149,119 +156,150 @@
 
     <main>
         <div id="print-area">
-            <!-- PAGE 1: 일정 -->
             <div class="print-page print-page-break">
-            <div class="print-header-top">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker">
-                <div class="print-doc-no">TM-261110-SHANGHAI · 1/2</div>
-            </div>
-            <div class="print-title">드림스타트 상해 3박4일 일정표</div>
-            <p class="print-subtitle">심란테크 · 과학기술관 · IRIC · 임시정부 · 신천지 · 남경로 · 외탄 유람선 · 디즈니 · 홍구공원</p>
-            <div class="print-overview">
-                <div><span class="label">사업</span> 2026 드림스타트 취약계층 해외연수</div>
-                <div><span class="label">일정</span> 2026.11.10(화) ~ 11.13(금)</div>
-                <div><span class="label">항공</span> OZ365 / OZ364 인천↔푸동</div>
-                <div><span class="label">호텔</span> 와심 푸동 테마파크(万信) 3박</div>
-                <div><span class="label">집결</span> 강릉 출발 · 인천 경유</div>
-            </div>
-            <div class="print-contacts">
-                <span>진행: 투어메이커 허나연 010-5066-0433 · 조혁 010-4249-4026</span>
-                <span>현지 가이드 · 미정</span>
-            </div>
-            <table class="tm-table">
-                <thead><tr><th class="tm-col-date">일자/지역</th><th class="tm-col-desc">상세 일정</th><th class="tm-col-meal">식사/숙박</th></tr></thead>
-                <tbody>
-                    <tr class="tm-day-divider">
-                        <td class="tm-col-date">1일차<span class="tm-date-sub">11/10(화)</span><span class="tm-date-city">강릉<br>상해</span></td>
-                        <td class="tm-col-desc">
-                            <ul class="tm-desc-list">
-                                <li>강릉 집결 → 인천공항(T1) 이동 · 출국 수속</li>
-                                <li><span class="tm-highlight">OZ365</span> 인천 14:10 → 푸동 15:10 · 입국 심사 후 가이드 미팅</li>
-                                <li><span class="tm-highlight">심란테크놀로지 그룹</span> 공식방문
-                                    <span class="tm-desc-note">푸동 장장 과학성. AI·로봇 전시장을 가이드 통역과 함께 관람하는 진로 체험입니다.</span>
-                                </li>
-                                <li><span class="tm-highlight">상해과학기술관</span> 관람
-                                    <span class="tm-desc-note">세기대로 대형 과학관. 우주·로봇·자연 체험 전시로, 같은 푸동 축에서 이어집니다.</span>
-                                </li>
-                                <li>와심 호텔 체크인 · 석식
-                                    <span class="tm-desc-note">푸동 테마파크점(川周公路7099호). 디즈니랜드와 가까운 숙소입니다.</span>
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> ×</div><div class="tm-meal-simple"><strong>중</strong> 간식</div><div class="tm-meal-simple"><strong>석</strong> 한식</div><div class="tm-meal-simple">와심 호텔</div></div></td>
-                    </tr>
-                    <tr>
-                        <td class="tm-col-date">2일차<span class="tm-date-sub">11/11(수)</span><span class="tm-date-city">상해</span></td>
-                        <td class="tm-col-desc">
-                            <ul class="tm-desc-list">
-                                <li><span class="tm-highlight">IRIC 지능제조센터</span> 공식방문
-                                    <span class="tm-desc-note">자딩구 남샹. 스마트제조·로봇 연수 거점. 관계자 설명과 로봇 체험을 초등 페이스로 진행합니다.</span>
-                                </li>
-                                <li><span class="tm-highlight">대한민국 임시정부 청사</span>
-                                    <span class="tm-desc-note">황푸구 마당로. 1926년부터 한국 근대사의 중심이었던 현장. 초등 눈높이로 짧게 관람합니다.</span>
-                                </li>
-                                <li><span class="tm-highlight">신천지</span> 카페거리
-                                    <span class="tm-desc-note">임시정부 옆 석고문 골목. 서양식 카페거리를 걸어 어제와 오늘의 상해를 비교합니다.</span>
-                                </li>
-                                <li>상해의 타임스퀘어 <span class="tm-highlight">남경로</span> 자유시간 (버블티)
-                                    <span class="tm-desc-note">인민광장에서 외탄까지 이어지는 보행자 거리. 가족 단위로 여유를 가집니다.</span>
-                                </li>
-                                <li>외탄 야경 · <span class="tm-highlight">황포강 유람선</span>
-                                    <span class="tm-desc-note">루자쭈이·동방명주 스카이라인을 남기고, 유람선에서 양쪽 불빛을 강 위에서 둘러봅니다.</span>
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> 호텔</div><div class="tm-meal-simple"><strong>중</strong> 현지</div><div class="tm-meal-simple"><strong>석</strong> 삼겹살</div><div class="tm-meal-simple">와심 호텔</div></div></td>
-                    </tr>
-                    <tr>
-                        <td class="tm-col-date">3일차<span class="tm-date-sub">11/12(목)</span><span class="tm-date-city">디즈니</span></td>
-                        <td class="tm-col-desc">
-                            <ul class="tm-desc-list">
-                                <li><span class="tm-highlight">상해 디즈니랜드 종일</span>
-                                    <span class="tm-desc-note">대륙 유일 주토피아 테마랜드. 호텔에서 가까워 이동이 짧고, 공원 안은 가이드가 동행하지 않습니다. 성 앞이 집합 장소입니다.</span>
-                                </li>
-                                <li>초등 페이스 · 우선 3곳
-                                    <span class="tm-desc-note">아이가 고른 어트랙션·퍼레이드·성 사진 중 셋을 목표로 하고, 나머지는 그늘·간식·여유로 둡니다.</span>
-                                </li>
-                                <li>공원 안 중식은 자유식 · 저녁 호텔 귀환 · 샤브샤브
-                                    <span class="tm-desc-note">식당 대기가 길 수 있어 간식·물을 보조로 챙깁니다. 키 제한·쇼는 당일 공원 운영에 따릅니다.</span>
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> 호텔</div><div class="tm-meal-simple"><strong>중</strong> 자유식</div><div class="tm-meal-simple"><strong>석</strong> 샤브샤브</div><div class="tm-meal-simple">와심 호텔</div></div></td>
-                    </tr>
-                    <tr>
-                        <td class="tm-col-date">4일차<span class="tm-date-sub">11/13(금)</span><span class="tm-date-city">상해<br>강릉</span></td>
-                        <td class="tm-col-desc">
-                            <ul class="tm-desc-list">
-                                <li>호텔 조식 · 체크아웃
-                                    <span class="tm-desc-note">귀국편에 맞춰 오전에 짐을 정리하고, 홍구공원을 본 뒤 푸동공항으로 향합니다.</span>
-                                </li>
-                                <li><span class="tm-highlight">홍구공원</span> · 윤봉길 기념당
-                                    <span class="tm-desc-note">1932년 윤봉길 의사 의거 현장(현 루쉰공원). 매헌 기념당에서 임시정부와 이어지는 근대사를 짧게 돌아봅니다.</span>
-                                </li>
-                                <li><span class="tm-highlight">OZ364</span> 푸동 13:10 → 인천 16:00 → 강릉 귀환
-                                    <span class="tm-desc-note">인천 도착 후 강릉으로 이동합니다. 여권·입국신고서는 출국 심사까지 손에 둡니다.</span>
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조</strong> 호텔</div><div class="tm-meal-simple"><strong>중</strong> 현지</div><div class="tm-meal-simple"><strong>석</strong> 개별</div></div></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="print-footer-area">
-                <div>※ 항공·호텔·입장권은 예약 시점에 따라 조정될 수 있습니다.</div>
-                <div class="manager">비상연락: 허나연 010-5066-0433 · 조혁 010-4249-4026</div>
-            </div>
+                <div class="std-header">
+                    <div class="logo"><img src="assets/images/bombom-logo.png" alt="봄봄콘텐츠"></div>
+                    <div class="std-doc-info">문서번호: BBC-261110-SH · 1/2</div>
+                </div>
+                <div class="std-title">
+                    <h1>[드림스타트] 상해 3박 4일 일정표</h1>
+                </div>
+                <div class="std-overview">
+                    <div><span class="label">행사기간</span> 2026. 11. 10 (화) ~ 11. 13 (금)</div>
+                    <div><span class="label">이용항공</span> 아시아나항공 (OZ365 / OZ364)</div>
+                    <div><span class="label">숙박</span> 와심 푸동 테마파크 3박</div>
+                </div>
+                <table class="std-table">
+                    <thead>
+                        <tr>
+                            <th class="col-date">일자</th>
+                            <th class="col-desc">상세 일정</th>
+                            <th class="col-meal">식사</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="day-divider">
+                            <td class="col-date"><strong>1일차</strong><span class="date-sub">11/10 (화)</span><span class="date-city">강릉 · 상해</span></td>
+                            <td class="col-desc">
+                                <div class="time-flow">강릉 집결 → 인천공항(T1) 이동 · 출국 수속</div>
+                                <div class="time-flow"><span class="time-tag">14:10</span> 인천 국제공항 출발 (OZ365)</div>
+                                <div class="time-flow"><span class="time-tag">15:10</span> 상해 푸동공항 도착 및 가이드 미팅</div>
+                                <ul class="desc-list">
+                                    <li>푸동 장장 과학성 <span class="highlight">심란테크놀로지 그룹</span> 공식방문
+                                        <span class="desc-note">AI·로봇 전시장을 가이드 통역과 함께 관람하는 진로 체험입니다.</span>
+                                    </li>
+                                    <li>세기대로 대형 과학관 <span class="highlight">상해과학기술관</span> 관람
+                                        <span class="desc-note">우주·로봇·자연 체험 전시로, 같은 푸동 축에서 이어집니다.</span>
+                                    </li>
+                                </ul>
+                                <hr class="hotel-divider">
+                                <div class="hotel-info"><strong>호텔명 : 와심 푸동 테마파크 (万信)</strong></div>
+                            </td>
+                            <td class="col-meal">
+                                <div class="meal-wrapper">
+                                    <div class="meal-simple"><strong>조:</strong> ×</div>
+                                    <div class="meal-simple"><strong>중:</strong> 간식</div>
+                                    <div class="meal-simple"><strong>석:</strong> 한식</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="day-divider">
+                            <td class="col-date"><strong>2일차</strong><span class="date-sub">11/11 (수)</span><span class="date-city">상해</span></td>
+                            <td class="col-desc">
+                                <div class="time-flow">호텔 조식 후 가이드 미팅</div>
+                                <ul class="desc-list">
+                                    <li>자딩구 남샹 <span class="highlight">IRIC 지능제조센터</span> 공식방문
+                                        <span class="desc-note">스마트제조·로봇 연수 거점. 관계자 설명과 로봇 체험을 초등 페이스로 진행합니다.</span>
+                                    </li>
+                                    <li>황푸구 마당로 <span class="highlight">대한민국 임시정부 청사</span>
+                                        <span class="desc-note">1926년부터 한국 근대사의 중심이었던 현장. 초등 눈높이로 짧게 관람합니다.</span>
+                                    </li>
+                                    <li>임시정부 옆 석고문 골목 <span class="highlight">신천지</span> 카페거리
+                                        <span class="desc-note">서양식 카페거리를 걸어 어제와 오늘의 상해를 비교합니다.</span>
+                                    </li>
+                                    <li>상해의 타임스퀘어 <span class="highlight">남경로</span> 자유시간 (버블티)
+                                        <span class="desc-note">인민광장에서 외탄까지 이어지는 보행자 거리. 가족 단위로 여유를 가집니다.</span>
+                                    </li>
+                                    <li>외탄 야경 · <span class="highlight">황포강 유람선</span>
+                                        <span class="desc-note">루자쭈이·동방명주 스카이라인을 남기고, 유람선에서 양쪽 불빛을 강 위에서 둘러봅니다.</span>
+                                    </li>
+                                </ul>
+                                <hr class="hotel-divider">
+                                <div class="hotel-info"><strong>호텔명 : 와심 푸동 테마파크 (万信)</strong></div>
+                            </td>
+                            <td class="col-meal">
+                                <div class="meal-wrapper">
+                                    <div class="meal-simple"><strong>조:</strong> 호텔식</div>
+                                    <div class="meal-simple"><strong>중:</strong> 현지식</div>
+                                    <div class="meal-simple"><strong>석:</strong> 삼겹살</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="day-divider">
+                            <td class="col-date"><strong>3일차</strong><span class="date-sub">11/12 (목)</span><span class="date-city">디즈니</span></td>
+                            <td class="col-desc">
+                                <div class="time-flow">호텔 조식 후 상해 디즈니랜드 이동</div>
+                                <ul class="desc-list">
+                                    <li><span class="highlight">상해 디즈니랜드 종일</span>
+                                        <span class="desc-note">대륙 유일 주토피아. 공원 안은 가이드 미동행이며, 성 앞이 집합 장소입니다.</span>
+                                    </li>
+                                    <li>초등 페이스 · 우선 3곳
+                                        <span class="desc-note">아이가 고른 어트랙션·퍼레이드·성 사진 중 셋을 목표로 하고, 나머지는 여유로 둡니다.</span>
+                                    </li>
+                                    <li>공원 안 중식은 자유식 · 저녁 호텔 귀환
+                                        <span class="desc-note">식당 대기가 길 수 있어 간식·물을 보조로 챙깁니다. 키 제한·쇼는 당일 공원 운영에 따릅니다.</span>
+                                    </li>
+                                </ul>
+                                <hr class="hotel-divider">
+                                <div class="hotel-info"><strong>호텔명 : 와심 푸동 테마파크 (万信)</strong></div>
+                            </td>
+                            <td class="col-meal">
+                                <div class="meal-wrapper">
+                                    <div class="meal-simple"><strong>조:</strong> 호텔식</div>
+                                    <div class="meal-simple"><strong>중:</strong> 자유식</div>
+                                    <div class="meal-simple"><strong>석:</strong> 샤브샤브</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="day-divider">
+                            <td class="col-date"><strong>4일차</strong><span class="date-sub">11/13 (금)</span><span class="date-city">상해 · 강릉</span></td>
+                            <td class="col-desc">
+                                <div class="time-flow">호텔 조식 후 체크아웃</div>
+                                <ul class="desc-list">
+                                    <li><span class="highlight">홍구공원</span> · 윤봉길 기념당
+                                        <span class="desc-note">1932년 윤봉길 의사 의거 현장(현 루쉰공원). 매헌 기념당에서 임시정부와 이어지는 근대사를 짧게 돌아봅니다.</span>
+                                    </li>
+                                </ul>
+                                <div class="time-flow" style="margin-top: 8px;"><span class="time-tag">13:10</span> 상해 푸동공항 출발 (OZ364)</div>
+                                <div class="time-flow"><span class="time-tag">16:00</span> 인천 국제공항 도착 후 강릉 귀환</div>
+                            </td>
+                            <td class="col-meal">
+                                <div class="meal-wrapper">
+                                    <div class="meal-simple"><strong>조:</strong> 호텔식</div>
+                                    <div class="meal-simple"><strong>중:</strong> 현지식</div>
+                                    <div class="meal-simple"><strong>석:</strong> 개별</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="remarks">※ 상기 일정은 항공기 연발착 및 현지 사정에 따라 다소 변경될 수 있습니다.</div>
+                <div class="footer-box">
+                    <span class="brand-link">봄봄콘텐츠 BOMBOM CONTENTS</span>
+                    <div class="manager-info">
+                        <div class="names">담당자 : 김자영 010-6285-8138</div>
+                    </div>
+                </div>
             </div>
 
-            <!-- PAGE 2: 준비물 + 스마트가이드북 QR -->
             <div class="print-page">
-                <div class="print-header-top">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker">
-                    <div class="print-doc-no">TM-261110-SHANGHAI · 2/2</div>
+                <div class="std-header">
+                    <div class="logo"><img src="assets/images/bombom-logo.png" alt="봄봄콘텐츠"></div>
+                    <div class="std-doc-info">문서번호: BBC-261110-SH · 2/2</div>
                 </div>
-                <div class="print-title">여행 준비물 체크리스트</div>
+                <div class="std-title">
+                    <h1>여행 준비물 체크리스트</h1>
+                </div>
                 <p class="print-section-title">출국 전 확인</p>
                 <div class="print-check-grid">
                     <div class="print-check-item"><span class="print-check-box"></span><span>여권 원본 (귀국일 기준 유효기간 6개월 이상)</span></div>
@@ -286,9 +324,11 @@
                         <p class="print-qr-url">https://indadady.github.io/261110_Shanghai/</p>
                     </div>
                 </div>
-                <div class="print-footer-area">
-                    <div>※ 스마트 가이드북에서 상세 일정·동선·회화를 확인하세요.</div>
-                    <div class="manager">비상연락: 허나연 010-5066-0433 · 조혁 010-4249-4026</div>
+                <div class="footer-box">
+                    <span class="brand-link">봄봄콘텐츠 BOMBOM CONTENTS</span>
+                    <div class="manager-info">
+                        <div class="names">담당자 : 김자영 010-6285-8138</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1262,9 +1302,8 @@
                         <div class="absolute top-0 left-0 w-full h-1 bg-tm"></div>
                         <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-4 mx-auto"><i class="fa-solid fa-headset text-tm text-2xl"></i></div>
                         <span class="text-xs text-slate-400 font-bold mb-1 block">여행 진행 및 안전 관리</span>
-                        <h4 class="font-bold text-slate-800 text-xl mb-2">투어메이커 상황실</h4>
-                        <p class="text-sm text-slate-600">허나연 대표 : <a href="tel:010-5066-0433" class="text-tm font-bold">010-5066-0433</a></p>
-                        <p class="text-sm text-slate-600 mt-1">조혁 이사 : <a href="tel:010-4249-4026" class="text-tm font-bold">010-4249-4026</a></p>
+                        <h4 class="font-bold text-slate-800 text-xl mb-2">봄봄콘텐츠</h4>
+                        <p class="text-sm text-slate-600">김자영 대표 : <a href="tel:010-6285-8138" class="text-tm font-bold">010-6285-8138</a></p>
                     </div>
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm text-center relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-1 bg-indigo-500"></div>
@@ -1347,12 +1386,9 @@
 
     <footer class="bg-[#f8f9fa] py-12 border-t border-slate-200 text-center no-print">
         <p class="text-[12px] md:text-[13px] text-[#6c757d] font-normal mb-8 max-w-2xl mx-auto leading-relaxed">
-            [System Powered by TOURMAKER] 본 스마트 가이드북은 <strong class="text-slate-700">드림스타트</strong>의 기획과 <a href="http://tourmaker.kr" target="_blank" class="font-bold text-[#6c757d] hover:text-blue-600 underline underline-offset-2">투어메이커</a>의 트래블 테크 기술 제휴로 제작되었습니다.
+            본 스마트 가이드북은 <strong class="text-slate-700">봄봄콘텐츠</strong>가 진행하는 드림스타트 해외연수 안내를 위해 제작되었습니다.
         </p>
-        <a href="http://tourmaker.kr" target="_blank" class="inline-block border border-slate-300 rounded-xl px-6 py-3 bg-white text-slate-700 font-bold hover:bg-slate-50 shadow-sm text-sm">
-            <i class="fa-solid fa-home mr-1"></i> 투어메이커 공식 홈페이지
-        </a>
-        <p class="text-[10px] text-slate-400 mt-6">TM-261110-SHANGHAI · © 2026 Tourmaker Inc.</p>
+        <p class="text-[10px] text-slate-400 mt-6">BBC-261110-SH · 봄봄콘텐츠</p>
     </footer>
 
     <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-20 opacity-0 transition-all duration-300 z-[80] no-print">
