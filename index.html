@@ -13,7 +13,7 @@
     <title>드림스타트 상해 3박4일 · 투어메이커 스마트 가이드북</title>
     <meta name="description" content="2026 드림스타트 취약계층 해외연수 · 상해 3박4일 스마트 가이드북 (TM-261110-SHANGHAI)">
     <meta property="og:title" content="드림스타트 상해 가이드북">
-    <meta property="og:description" content="2026.11.10~13 · 아시아나 OZ365/364 · 만신 3박 일정 안내">
+    <meta property="og:description" content="2026.11.10~13 · 공식방문 IRIC·심란·웨이징 · 아시아나 OZ365/364">
     <meta property="og:image" content="https://indadady.github.io/261110_Shanghai/assets/images/og-thumb.jpg">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1272">
@@ -54,6 +54,8 @@
         .schedule-media { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
         @media(min-width:768px) { .schedule-media { flex-direction: row; align-items: flex-start; gap: 1rem; } .schedule-media .schedule-desc { flex: 1; min-width: 0; } }
         .schedule-thumb { display: block; width: 100%; max-width: 12rem; aspect-ratio: 4/3; object-fit: cover; border-radius: 0.75rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(15,23,42,.08); flex-shrink: 0; }
+        .official-badge { display: inline-flex; align-items: center; gap: 0.25rem; background: #5b21b6; color: #fff; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.02em; padding: 0.2rem 0.5rem; border-radius: 999px; vertical-align: middle; }
+        .official-visit-block { background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 1rem; padding: 0.75rem 0.85rem; }
         .contact-row { display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 0.75rem; padding: 0.875rem 1rem; }
         .contact-badge { flex-shrink: 0; width: 3rem; text-align: center; font-size: 0.65rem; font-weight: 800; background: rgba(0,64,152,.25); color: #93c5fd; padding: 0.35rem 0.25rem; border-radius: 0.5rem; }
         @media screen { #print-area { display: none !important; } }
@@ -92,6 +94,7 @@
             .desc-list li:last-child { margin-bottom: 0 !important; }
             .desc-list li::before { content: '■'; font-size: 8px; position: absolute; left: 0; top: 4px; color: #004098; }
             .desc-note { display: block; font-size: 11px; color: #475569; font-weight: 500; line-height: 1.4; margin-top: 1px; }
+            .print-official { display: inline-block; font-size: 10px; font-weight: 800; color: #fff; background: #5b21b6 !important; padding: 1px 6px; border-radius: 4px; margin-right: 4px; letter-spacing: 0; }
             .hotel-divider { border: 0; border-top: 1px dashed #94a3b8; margin: 7px 0 6px 0; }
             .hotel-info { font-size: 12.5px; color: #0f172a; }
             .meal-wrapper { display: flex; flex-direction: column; gap: 8px; justify-content: center; height: 100%; text-align: left; padding-left: 4px; }
@@ -126,12 +129,12 @@
                 <div class="flex items-center space-x-1 md:space-x-3 whitespace-nowrap pr-4 text-sm">
                     <a href="#home" class="px-3 py-2 font-bold text-slate-600 hover:text-tm rounded-lg">홈</a>
                     <a href="#highlights" class="px-3 py-2 font-bold text-tm rounded-lg">핵심포인트</a>
+                    <a href="#ai-visit" class="px-3 py-2 font-bold text-violet-700 hover:text-violet-900 rounded-lg">공식방문</a>
                     <a href="#flight" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">항공</a>
                     <a href="#arrival-card" class="px-3 py-2 font-bold text-amber-700 hover:text-amber-900 rounded-lg">입국심사</a>
                     <a href="#map-section" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">동선</a>
                     <a href="#schedule" class="px-3 py-2 font-bold text-tm rounded-lg">상세일정</a>
                     <a href="#humanities" class="px-3 py-2 font-bold text-amber-700 hover:text-amber-900 rounded-lg">인문학탐구</a>
-                    <a href="#ai-visit" class="px-3 py-2 font-bold text-violet-700 hover:text-violet-900 rounded-lg">AI공식방문</a>
                     <a href="#places" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">방문지</a>
                     <a href="#hotel" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">호텔</a>
                     <a href="#video" class="px-3 py-2 font-medium text-slate-600 hover:text-tm rounded-lg">영상</a>
@@ -167,6 +170,7 @@
                     <div><span class="label">행사기간</span> 2026. 11. 10 (화) ~ 11. 13 (금)</div>
                     <div><span class="label">이용항공</span> 아시아나항공 (OZ365 / OZ364)</div>
                     <div><span class="label">숙박</span> 상해 만신 호텔 3박</div>
+                    <div><span class="label">공식방문</span> IRIC · 심란테크 · 웨이징</div>
                 </div>
                 <table class="std-table">
                     <thead>
@@ -207,10 +211,10 @@
                             <td class="col-desc">
                                 <div class="time-flow">호텔 조식 후 가이드 미팅</div>
                                 <ul class="desc-list">
-                                    <li>자딩구 남샹 <span class="highlight">IRIC 지능제조센터</span> 공식방문
+                                    <li><span class="print-official">공식방문</span> 자딩구 남샹 <span class="highlight">IRIC 지능제조센터</span>
                                         <span class="desc-note">스마트제조·로봇 연수 거점. 관계자 설명과 로봇 체험을 초등 페이스로 진행합니다.</span>
                                     </li>
-                                    <li>푸동 장장 과학성 <span class="highlight">심란테크놀로지 그룹</span> 공식방문
+                                    <li><span class="print-official">공식방문</span> 푸동 장장 과학성 <span class="highlight">심란테크놀로지 그룹</span>
                                         <span class="desc-note">딥블루(DeepBlue). AI·로봇 전시장을 가이드 통역과 함께 관람하는 진로 체험입니다.</span>
                                     </li>
                                     <li>세기대로 대형 과학관 <span class="highlight">상해과학기술관</span> 관람
@@ -236,7 +240,7 @@
                             <td class="col-desc">
                                 <div class="time-flow">호텔 조식 후 가이드 미팅</div>
                                 <ul class="desc-list">
-                                    <li>민항구 마차오 <span class="highlight">웨이징 교육 로봇</span> 공식방문
+                                    <li><span class="print-official">공식방문</span> 민항구 마차오 <span class="highlight">웨이징 교육 로봇</span>
                                         <span class="desc-note">AI·로봇 전시관, 스마트 팩토리, 체험관을 관계자 설명·가이드 통역과 함께 둘러봅니다.</span>
                                     </li>
                                     <li>세계박람회 역사와 각국 문화를 전시한 <span class="highlight">상해엑스포박물관</span>
@@ -337,14 +341,15 @@
                 <span class="bg-tm/90 text-white px-5 py-2 rounded-full text-sm md:text-base font-bold mb-5 inline-block border border-white/20 shadow-lg tracking-widest">
                     <i class="fa-solid fa-heart mr-2"></i>드림스타트 해외연수
                 </span>
-                <h1 class="font-['Nanum_Myeongjo'] text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-lg">상해 3박 4일<br><span class="text-sky-200">공식방문 · 근대사 · 외탄</span></h1>
-                <p class="mt-4 text-base md:text-lg text-slate-100 max-w-xl mx-auto leading-relaxed">첫 해외여행을 떠나는 가족과 함께하는<br>AI·로봇 체험 · 임시정부 · 예원 · 황포강 야경</p>
+                <h1 class="font-['Nanum_Myeongjo'] text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-lg">상해 3박 4일<br><span class="text-violet-200">공식방문 3곳</span> · 근대사 · 외탄</h1>
+                <p class="mt-4 text-base md:text-lg text-slate-100 max-w-xl mx-auto leading-relaxed">IRIC · 심란테크 · 웨이징에서 로봇을 만나고<br>임시정부 · 예원 · 황포강 야경으로 이어지는 가족 연수</p>
                 <div class="bg-black/40 backdrop-blur-sm inline-block px-8 py-3 rounded-2xl mt-6 border border-white/20">
                     <p id="hero-date" class="text-sm md:text-base text-white font-bold">2026.11.10 (화) ~ 11.13 (금) · 3박 4일</p>
                     <p class="text-xs md:text-sm text-blue-100 font-medium mt-1">아시아나항공 OZ365 / OZ364 · 인천 ↔ 상해(푸동)</p>
                 </div>
                 <div class="mt-8 flex flex-wrap justify-center gap-3">
-                    <a href="#schedule" class="bg-white text-tm font-extrabold px-6 py-3 rounded-full shadow-lg hover:bg-sky-50">상세일정 보기</a>
+                    <a href="#ai-visit" class="bg-white text-tm font-extrabold px-6 py-3 rounded-full shadow-lg hover:bg-sky-50">공식방문 보기</a>
+                    <a href="#schedule" class="bg-white/15 border border-white/40 text-white font-bold px-6 py-3 rounded-full backdrop-blur-sm">상세일정</a>
                     <a href="#map-section" class="bg-white/15 border border-white/40 text-white font-bold px-6 py-3 rounded-full backdrop-blur-sm">동선 지도</a>
                 </div>
             </div>
@@ -355,7 +360,39 @@
                 <div class="text-center mb-10">
                     <span class="text-tm font-black tracking-widest text-xs uppercase">HIGHLIGHTS</span>
                     <h2 class="text-3xl font-bold text-slate-800 mt-2">이번 여정의 핵심</h2>
-                    <p class="text-sm text-slate-500 mt-2">AI 공식방문 · 근대사 · 시내 문화를 정안 만신 호텔 동선에 맞춰 구성했습니다.</p>
+                    <p class="text-sm text-slate-500 mt-2">드림스타트 연수의 중심은 <strong class="text-violet-700">공식방문 3곳</strong>입니다. 근대사·시내 문화가 그 뒤를 받칩니다.</p>
+                </div>
+                <div class="mb-10">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                        <h3 class="font-black text-violet-800 text-lg flex items-center gap-2"><i class="fa-solid fa-microchip"></i> 공식방문 3곳</h3>
+                        <a href="#ai-visit" class="text-sm font-extrabold text-violet-700 underline underline-offset-2 shrink-0">자세히 보기</a>
+                    </div>
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <a href="#ai-visit" class="group bg-violet-50 border-2 border-violet-200 rounded-2xl overflow-hidden hover:border-violet-400 hover:shadow-md transition">
+                            <img src="assets/images/day2-iric.jpg" alt="IRIC 지능제조센터" class="w-full h-28 object-cover">
+                            <div class="p-4">
+                                <span class="official-badge mb-2">2일차 · 공식방문</span>
+                                <p class="font-black text-slate-800 mt-2 leading-snug">IRIC 지능제조센터</p>
+                                <p class="text-xs text-slate-600 mt-1">자딩 남샹 · 로봇 체험</p>
+                            </div>
+                        </a>
+                        <a href="#ai-visit" class="group bg-violet-50 border-2 border-violet-200 rounded-2xl overflow-hidden hover:border-violet-400 hover:shadow-md transition">
+                            <img src="assets/images/day1-deepblue.jpg" alt="심란테크놀로지" class="w-full h-28 object-cover">
+                            <div class="p-4">
+                                <span class="official-badge mb-2">2일차 · 공식방문</span>
+                                <p class="font-black text-slate-800 mt-2 leading-snug">심란테크놀로지</p>
+                                <p class="text-xs text-slate-600 mt-1">장장 과학성 · AI·로봇</p>
+                            </div>
+                        </a>
+                        <a href="#ai-visit" class="group bg-violet-50 border-2 border-violet-200 rounded-2xl overflow-hidden hover:border-violet-400 hover:shadow-md transition">
+                            <img src="assets/images/day3-weijing.jpg" alt="웨이징 교육 로봇" class="w-full h-28 object-cover">
+                            <div class="p-4">
+                                <span class="official-badge mb-2">3일차 · 공식방문</span>
+                                <p class="font-black text-slate-800 mt-2 leading-snug">웨이징 교육 로봇</p>
+                                <p class="text-xs text-slate-600 mt-1">민항 마차오 · 전시·체험</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
@@ -363,12 +400,12 @@
                         <p class="text-slate-600 text-sm leading-relaxed">푸동 도착 후 상해의 타임스퀘어 <strong>남경로</strong>에서 버블티와 함께 여유를 갖고, 저녁에는 <strong>외탄 야경</strong>과 황포강 유람선으로 첫날을 엽니다. 숙소는 시내 정안 <strong>만신 호텔</strong>(또는 동급)입니다.</p>
                     </div>
                     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
-                        <h4 class="font-bold text-indigo-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-robot"></i> 2일차 · IRIC · 심란 · 과학기술관</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed">자딩·남샹 <strong>IRIC</strong>에서 로봇 체험 후, 푸동 장장 <strong>심란테크놀로지(딥블루)</strong>와 <strong>상해과학기술관</strong>을 잇고, 구시가 <strong>예원 옛거리</strong>에서 하루를 닫습니다.</p>
+                        <h4 class="font-bold text-indigo-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-robot"></i> 2일차 · 공식방문 IRIC · 심란</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed"><span class="official-badge mr-1">공식방문</span> 자딩·남샹 <strong>IRIC</strong> 로봇 체험과 푸동 장장 <strong>심란테크놀로지(딥블루)</strong>가 이날의 중심입니다. 이어서 <strong>상해과학기술관</strong>·<strong>예원 옛거리</strong>로 이어집니다.</p>
                     </div>
                     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
-                        <h4 class="font-bold text-violet-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-microchip"></i> 3일차 · 웨이징 · 엑스포 · 임시정부</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed">민항 마차오의 <strong>웨이징 교육 로봇</strong> 공식방문(전시관·스마트팩토리·체험관) 뒤, <strong>상해엑스포박물관</strong>과 1926년 근대사 현장인 <strong>임시정부 청사·신천지</strong>로 이어집니다.</p>
+                        <h4 class="font-bold text-violet-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-microchip"></i> 3일차 · 공식방문 웨이징</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed"><span class="official-badge mr-1">공식방문</span> 민항 마차오 <strong>웨이징 교육 로봇</strong>(전시관·스마트팩토리·체험관)이 이날의 중심입니다. 이어서 <strong>상해엑스포박물관</strong>과 <strong>임시정부 청사·신천지</strong>로 이어집니다.</p>
                     </div>
                     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
                         <h4 class="font-bold text-rose-600 mb-3 flex items-center gap-2"><i class="fa-solid fa-landmark"></i> 임시정부 · 홍구공원</h4>
@@ -389,7 +426,7 @@
                     <ul class="text-sm text-slate-700 space-y-3 leading-relaxed">
                         <li class="flex gap-3"><span class="text-tm font-black">01</span><span><strong>인사·예절</strong> — 니하오, 시에시에 / 공공장소·식당에서의 기본 매너</span></li>
                         <li class="flex gap-3"><span class="text-tm font-black">02</span><span><strong>화폐·간판</strong> — 위안화 감각, 한자 간판을 그림처럼 읽는 놀이</span></li>
-                        <li class="flex gap-3"><span class="text-tm font-black">03</span><span><strong>방문지 미리보기</strong> — 심란·과학기술관·IRIC·웨이징(AI·진로), 임시정부, 남경로·외탄 유람선, 예원, 엑스포박물관, 홍구공원</span></li>
+                        <li class="flex gap-3"><span class="text-tm font-black">03</span><span><strong>공식방문 미리보기</strong> — IRIC · 심란테크 · 웨이징, 이어서 임시정부 · 남경로·외탄 · 예원 · 엑스포박물관 · 홍구공원</span></li>
                         <li class="flex gap-3"><span class="text-tm font-black">04</span><span><strong>진로 대화</strong> — “로봇을 만드는 사람 / 코드를 짜는 사람 / 공장을 설계하는 사람”처럼 직업을 그림으로 상상해 보기</span></li>
                         <li class="flex gap-3"><span class="text-tm font-black">05</span><span><strong>안전</strong> — 가이드·부모님과 떨어지지 않기, 여권·휴대폰 보관</span></li>
                     </ul>
@@ -674,13 +711,14 @@
                         <div class="relative border-l-2 border-slate-200 ml-4 pl-6 space-y-7">
                             <div class="relative">
                                 <div class="timeline-dot bg-indigo-600 ring-indigo-100"></div>
-                                <div class="schedule-media">
+                                <div class="schedule-media official-visit-block">
                                     <div class="schedule-desc">
-                                        <h4 class="font-bold text-lg text-slate-800">IRIC 지능제조센터 공식방문</h4>
+                                        <h4 class="font-bold text-lg text-slate-800 flex flex-wrap items-center gap-2">IRIC 지능제조센터 <span class="official-badge">공식방문</span></h4>
                                         <ul class="text-sm text-slate-600 mt-2 space-y-1 list-disc pl-4">
                                             <li>상해 자딩구 남샹 · 스마트제조·로봇 국제연수 거점</li>
                                             <li>관계자 설명 · 가이드 통역 · <strong>로봇 체험</strong> 위주로 초등 페이스에 맞춰 진행</li>
                                             <li><strong>진로 포인트</strong> — 공장·로봇·코딩이 연결되는 “만드는 직업”을 직접 만져 보기</li>
+                                            <li><a href="#ai-visit" class="text-violet-700 font-bold underline underline-offset-2">공식방문 자세히 보기</a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/day2-iric.jpg" alt="지능제조 · 로봇 체험" class="schedule-thumb">
@@ -688,13 +726,14 @@
                             </div>
                             <div class="relative">
                                 <div class="timeline-dot bg-violet-600 ring-violet-100"></div>
-                                <div class="schedule-media">
+                                <div class="schedule-media official-visit-block">
                                     <div class="schedule-desc">
-                                        <h4 class="font-bold text-lg text-slate-800">심란테크놀로지 그룹 공식방문</h4>
+                                        <h4 class="font-bold text-lg text-slate-800 flex flex-wrap items-center gap-2">심란테크놀로지 그룹 <span class="official-badge">공식방문</span></h4>
                                         <ul class="text-sm text-slate-600 mt-2 space-y-1 list-disc pl-4">
                                             <li>딥블루(DeepBlue) · 푸동 장장 과학성 본사 권역</li>
                                             <li>AI·로봇·스마트모빌리티 전시장을 가이드 통역과 함께 짧게 관람</li>
                                             <li><strong>진로 포인트</strong> — “사람을 돕는 인공지능·로봇을 만드는 일”을 현장에서 느껴 보기</li>
+                                            <li><a href="#ai-visit" class="text-violet-700 font-bold underline underline-offset-2">공식방문 자세히 보기</a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/day1-deepblue.jpg" alt="장장 과학성 · 심란테크 방문 권역" class="schedule-thumb">
@@ -743,14 +782,14 @@
                         <div class="relative border-l-2 border-slate-200 ml-4 pl-6 space-y-7">
                             <div class="relative">
                                 <div class="timeline-dot bg-cyan-600 ring-cyan-100"></div>
-                                <div class="schedule-media">
+                                <div class="schedule-media official-visit-block">
                                     <div class="schedule-desc">
-                                        <h4 class="font-bold text-lg text-slate-800">웨이징 교육 로봇 공식방문</h4>
+                                        <h4 class="font-bold text-lg text-slate-800 flex flex-wrap items-center gap-2">웨이징 교육 로봇 <span class="official-badge">공식방문</span></h4>
                                         <ul class="text-sm text-slate-600 mt-2 space-y-1 list-disc pl-4">
                                             <li>상하이 웨이징 로보틱스(上海鲸鱼机器人) · 민항구 마차오 자쉬로 188호</li>
                                             <li>관계자 설명 · 가이드 통역과 함께 AI·로봇 전시관, 스마트 팩토리, 체험관을 둘러봅니다</li>
                                             <li>3~22세 교육용 로봇을 직접 보고 만져 보는 진로 체험입니다</li>
-                                            <li>자세한 안내는 <a href="#ai-visit" class="text-tm font-bold underline underline-offset-2">AI공식방문</a>을 참고하세요</li>
+                                            <li><a href="#ai-visit" class="text-violet-700 font-bold underline underline-offset-2">공식방문 자세히 보기</a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/day3-weijing.jpg" alt="웨이징 교육 로봇 제품군" class="schedule-thumb">
@@ -915,11 +954,11 @@
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <span class="inline-block bg-violet-100 text-violet-800 text-xs px-3 py-1 rounded-full font-bold shadow-sm mb-3">
-                            <i class="fa-solid fa-microchip"></i> AI · CAREER EXPLORATION
+                            <i class="fa-solid fa-building-circle-check"></i> OFFICIAL VISITS
                         </span>
                         <h2 class="text-3xl md:text-4xl font-bold text-slate-800 font-['Nanum_Myeongjo'] leading-tight mt-2">
-                            미래를 먼저 만나 보는 세 곳<br>
-                            <span class="text-violet-700">심란테크 · IRIC · 웨이징</span>
+                            공식방문 3곳<br>
+                            <span class="text-violet-700">IRIC · 심란테크 · 웨이징</span>
                         </h2>
                         <p class="text-slate-500 mt-4 text-sm md:text-base max-w-2xl mx-auto">드림스타트 연수의 진로 체험입니다. 직업을 “정하는” 자리가 아니라, <strong class="text-slate-700">호기심의 씨앗</strong>을 심는 시간으로 읽어 주세요.</p>
                     </div>
@@ -1072,7 +1111,7 @@
                 <div class="text-center mb-10">
                     <span class="text-tm font-black tracking-widest text-xs uppercase">PLACES</span>
                     <h2 class="text-3xl font-bold text-slate-800 mt-2">방문지 미리보기</h2>
-                    <p class="text-sm text-slate-500 mt-2">AI 공식방문 3곳은 <a href="#ai-visit" class="text-violet-700 font-bold underline underline-offset-2">AI공식방문</a>에서, 임시정부는 <a href="#humanities" class="text-amber-700 font-bold underline underline-offset-2">인문학탐구</a>에서 자세히 볼 수 있어요.</p>
+                    <p class="text-sm text-slate-500 mt-2">연수의 중심인 <a href="#ai-visit" class="text-violet-700 font-bold underline underline-offset-2">공식방문 3곳</a>은 따로 자세히 볼 수 있어요. 임시정부는 <a href="#humanities" class="text-amber-700 font-bold underline underline-offset-2">인문학탐구</a>에서 안내합니다.</p>
                 </div>
 
                 <div class="space-y-5">
