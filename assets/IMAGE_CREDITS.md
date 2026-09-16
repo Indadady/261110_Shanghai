@@ -4,8 +4,8 @@
 |------|--------|---------|
 | hero.jpg | [Commons: File:20191112 The Bund-2.jpg](https://commons.wikimedia.org/wiki/File:20191112_The_Bund-2.jpg) · Balon Greyjoy · 11월 외탄 주간 전경 | CC BY-SA 4.0 |
 | og-thumb.jpg | [Commons: File:Lujiazui from the Bund at night.jpg](https://commons.wikimedia.org/wiki/File:Lujiazui_from_the_Bund_at_night.jpg) · 카카오 미리보기용 야경 (히어로와 별도) | CC BY-SA |
-| hotel.jpg | 현지 제공 PPTX 만신 계열 호텔 외관 | 담당자 제공 |
-| hotel-room.jpg | 현지 제공 PPTX 트윈룸 | 담당자 제공 |
+| hotel.jpg | 현지 제공 PPTX `만신-와심 호텔 상하이 푸동 테마파크` 외관 (万信/Wassim) | 담당자 제공 |
+| hotel-room.jpg | 현지 제공 PPTX 동일 호텔 트윈룸 | 담당자 제공 |
 | day1-deepblue.jpg | [Commons: File:Pudong Software Park, Shanghai - panoramio.jpg](https://commons.wikimedia.org/wiki/File:Pudong_Software_Park,_Shanghai_-_panoramio.jpg) · 장강(장장) 과기원 분위기 | CC BY 3.0 (Panoramio) |
 | day1-stm.jpg | [Commons: File:Shanghai Science & Technology Museum 1.jpg](https://commons.wikimedia.org/wiki/File:Shanghai_Science_%26_Technology_Museum_1.jpg) | CC BY-SA |
 | day1-provisional.jpg | [Commons: File:Entrance of Provisional Government of ROK in Shanghai.JPG](https://commons.wikimedia.org/wiki/File:Entrance_of_Provisional_Government_of_ROK_in_Shanghai.JPG) | CC BY-SA 3.0 |
